@@ -1,45 +1,32 @@
-VPS manager: [Digital Ocean](https://cloud.digitalocean.com/)
 
-OS: [**Ubuntu 18.04.2 LTS**]([http://releases.ubuntu.com/18.04/](http://releases.ubuntu.com/18.04/))
-
-SIZE: 1CPU, 2GB RAM, 50GB SSD, 2TB data (to upsize temporarily to 2CPUs,4GB RAM if installing r_packages_all)  
-
-Datacenter Region: *London*
-
-IP: 
-
-hostname:  
-
-ports: 
-
-domain: 
-
-usrname: 
-
-ssh-key: 
-
-grpname: **public**  
-
-public folder: `/usr/local/share/public`
-
-$R$ packages folder: `/usr/local/share/public/R_library`
-
-last updated: *19-Oct-2019*
+  - VPS manager: [Digital Ocean](https://cloud.digitalocean.com/)
+  - OS: [**Ubuntu 18.04.2 LTS**]([http://releases.ubuntu.com/18.04/](http://releases.ubuntu.com/18.04/))
+  - SIZE: 1CPU, 2GB RAM, 50GB SSD, 2TB data (to upsize temporarily to 2CPUs,4GB RAM if installing r_packages_all)  
+  - Datacenter Region: *London*
+  - IP: 
+  - hostname:  
+  - ports: 
+  - domain: 
+  - usrname: 
+  - ssh-key: 
+  - grpname: **public**  
+  - public folder: `/usr/local/share/public`
+  - $R$ packages folder: `/usr/local/share/public/R_library`
 
 ### Basic Configuration
 
--   [x] create machine
--   [x] first connection: change root password (if not automatic, run  `passwd`)
--   [ ] check/change timezone
--   [x] update/upgrade/dist-upgrade the system
--   [x] add DO monitoring:  `curl -sSL https://agent.digitalocean.com/install.sh | sh`
--   [x] install missing  _default_  packages:
+  - [x] create machine
+  - [x] first connection: change root password (if not automatic, run  `passwd`)
+  - [ ] check/change timezone
+  - [x] update/upgrade/dist-upgrade the system
+  - [x] add DO monitoring:  `curl -sSL https://agent.digitalocean.com/install.sh | sh`
+  - [x] install missing  _default_  packages:
     
     ```
         apt-get install -y apt-transport-https software-properties-common dos2unix man-db ufw git-core nano libauthen-oath-perl openssh-server
     ```
     
--   [x] add user(s) to system:  `adduser luca`
+  - [x] add user(s) to system:  `adduser luca`
 -   [x] add user(s) to  _sudo_  group:  `usermod -aG sudo luca`  ==> check
 -   [x] configure  _git_  for new user(s):
     
@@ -81,5 +68,5 @@ last updated: *19-Oct-2019*
 -   [x] add a domain name (see  [Freenom](https://www.freenom.com/)  for a  _true_  free domain)
 -   [x] take a snapshot:  _webmin_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg0NTQ0NDcwXX0=
+eyJoaXN0b3J5IjpbLTk4NDI2NTgyMF19
 -->
