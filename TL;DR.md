@@ -1,12 +1,12 @@
 
   - VPS manager: [Digital Ocean](https://cloud.digitalocean.com/)
-  - OS: [**Ubuntu 18.04.2 LTS**]([http://releases.ubuntu.com/18.04/](http://releases.ubuntu.com/18.04/))
-  - SIZE: 1CPU, 2GB RAM, 50GB SSD, 2TB data (to upsize temporarily to 2CPUs,4GB RAM if installing r_packages_all)  
+  - OS: [Ubuntu **18.04**.2 LTS]([http://releases.ubuntu.com/18.04/](http://releases.ubuntu.com/18.04/))
+  - Size: 1CPU, 2GB RAM, 50GB SSD, 2TB data (to upsize temporarily to 2CPUs,4GB RAM if installing r_packages_all)  
   - Datacenter Region: *London*
   - IP: 
-  - hostname:  
+  - hostname: 
   - ports: 
-  - domain: 
+  - domain: [Freenom](https://www.freenom.com/)
   - usrname: 
   - ssh-key: 
   - grpname: **public**  
@@ -68,5 +68,5 @@
 -   [x] add a domain name (see  [Freenom](https://www.freenom.com/)  for a  _true_  free domain)
 -   [x] take a snapshot:  _webmin_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NTg5NzQ4NF19
+eyJoaXN0b3J5IjpbLTk0MTU5ODg0MSwtNTk1ODk3NDg0XX0=
 -->
