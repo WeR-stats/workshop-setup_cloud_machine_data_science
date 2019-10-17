@@ -15,29 +15,29 @@
 
 ### Basic Configuration
 
-  - [x] create machine
-  - [x] first connection: change root password (if not automatic, run  `passwd`)
+  - [ ] create machine
+  - [ ] first connection: change root password (if not automatic, run  `passwd`)
   - [ ] check/change timezone
-  - [x] update/upgrade/dist-upgrade the system
-  - [x] add DO monitoring:  `curl -sSL https://agent.digitalocean.com/install.sh | sh`
-  - [x] install missing  _default_  packages:
+  - [ ] update/upgrade/dist-upgrade the system
+  - [ ] add DO monitoring:  `curl -sSL https://agent.digitalocean.com/install.sh | sh`
+  - [ ] install missing  _default_  packages:
     
     ```
         apt-get install -y apt-transport-https software-properties-common dos2unix man-db ufw git-core nano libauthen-oath-perl openssh-server
     ```
     
-  - [x] add user(s) to system:  `adduser luca`
--   [x] add user(s) to  _sudo_  group:  `usermod -aG sudo luca`  ==> check
--   [x] configure  _git_  for new user(s):
+  - [ ] add user(s) to system:  `adduser luca`
+  - [ ] add user(s) to  _sudo_  group:  `usermod -aG sudo luca`  ==> check
+  - [ ] configure  _git_  for new user(s):
     
     ```
         git config --global user.name "Luca Valnegri"
         git config --global user.email "l.valnegri@datamaps.co.uk"
     ```
     
--   [x] add  _public_  group:  `sudo groupadd public`
--   [x] add user(s) to group:  `sudo usermod -aG public luca`
--   [x] add  _public_  repository
+  - [ ] add  _public_  group:  `sudo groupadd public`
+  - [ ] add user(s) to group:  `sudo usermod -aG public luca`
+  - [ ] add  _public_  repository
     
     ```
         sudo mkdir -p /usr/local/share/public/
@@ -45,7 +45,7 @@
         sudo chmod -R 2775 /usr/local/share/public/
     ```
     
--   [x] set public repo in  `/etc/environment`  as  **PUB_PATH**
+  - [ ] set public repo in  `/etc/environment`  as  **PUB_PATH**
 -   [x] reboot:  `sudo reboot`
 -   [x] add subfolders  `software`  and  `scripts`  to  `home`  folder
 -   [x] add subfolders  `subs`  and  `r_packages`  to  `scripts`  subfolder
@@ -68,5 +68,5 @@
 -   [x] add a domain name (see  [Freenom](https://www.freenom.com/)  for a  _true_  free domain)
 -   [x] take a snapshot:  _webmin_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NDI2NTgyMF19
+eyJoaXN0b3J5IjpbLTU5NTg5NzQ4NF19
 -->
