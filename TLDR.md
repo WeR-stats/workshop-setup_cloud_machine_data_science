@@ -1,17 +1,17 @@
-VPS manager: https://cloud.digitalocean.com/  
-OS: Ubuntu 18.04.2 LTS  
+VPS manager: [Digital Ocean](https://cloud.digitalocean.com/)
+OS: [**Ubuntu 18.04.2 LTS**]([http://releases.ubuntu.com/18.04/](http://releases.ubuntu.com/18.04/))
 SIZE: 1CPU, 2GB RAM, 50GB SSD, 2TB data (upsize temporarily to 2CPUs,4GB RAM if installing r_packages_all)  
 Datacenter Region: London  
 IP: 
 hostname:  
 ports: 
-domain: ??? (add subsequently according to build)  
-usrname: luca  
-ssh-key: ??? (add subsequently according to build)  
-grpname: public  
-public folder: /usr/local/share/public  
-R packages folder: /usr/local/share/public/R_library  
-last updated: 12-Apr-2019
+domain: 
+usrname: 
+ssh-key: 
+grpname: **public**  
+public folder: `/usr/local/share/public`
+$R$ packages folder: `/usr/local/share/public/R_library`
+last updated: *19-Oct-2019*
 
 ### Basic Configuration
 
@@ -68,5 +68,5 @@ last updated: 12-Apr-2019
 -   [x] add a domain name (see  [Freenom](https://www.freenom.com/)  for a  _true_  free domain)
 -   [x] take a snapshot:  _webmin_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MjM3NjA1OV19
+eyJoaXN0b3J5IjpbNDY1Nzg0MTVdfQ==
 -->
