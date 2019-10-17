@@ -62,13 +62,14 @@
   - [ ] change port to SSH:  `sudo nano /etc/ssh/sshd_config`  (restart SSH + check)
   - [ ] enable firewall:  `sudo ufw enable`  (check)
   - [ ] allow (new) SSH port:  `sudo ufw allow XYYYY`  (check)
-  - [ ] install antivirus [ClamAV]():  
+  - [ ] install antivirus [ClamAV](https://www.clamav.net/):  
          `sudo apt-get install -y ClamAV`
   - [ ] install webmin / allow port 10000 (check, remember it's only on  `https`)
   - [ ] redirect http / change port / allow new port / delete previous port rule (check)
   - [ ] add 2FA
--   [x] add a domain name (see  [Freenom](https://www.freenom.com/)  for a  _true_  free domain)
--   [x] take a snapshot:  _webmin_
+  - [ ] add a domain name
+  - [ ] take a snapshot
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQ1OTc5NTMsLTU5NTg5NzQ4NF19
+eyJoaXN0b3J5IjpbMjQ2NTM1NDk4LC01OTU4OTc0ODRdfQ==
 -->
