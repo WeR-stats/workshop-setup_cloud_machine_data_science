@@ -60,7 +60,7 @@
     `wget -O home_subs.lst https://pastebin.com/raw/Ze6M1snP`
   - [ ] deny the  `root`  user direct access via SSH:  `sudo nano /etc/ssh/sshd_config`  (restart SSH + check)
   - [ ] change port to SSH:  `sudo nano /etc/ssh/sshd_config`  (restart SSH + check)
-  - [ ] enable firewall:  `sudo ufw enable`  (check)
+  - [ ] enable the default firewall [UFW](https://help.ubuntu.com/community/UFW):  `sudo ufw enable`  (check)
   - [ ] allow (new) SSH port:  `sudo ufw allow XYYYY`  (check)
   - [ ] install antivirus [ClamAV](https://www.clamav.net/):  
          `sudo apt-get install -y ClamAV`
@@ -71,5 +71,5 @@
   - [ ] take a snapshot
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ2NTM1NDk4LC01OTU4OTc0ODRdfQ==
+eyJoaXN0b3J5IjpbLTQ2MjgzMjEwNiwtNTk1ODk3NDg0XX0=
 -->
