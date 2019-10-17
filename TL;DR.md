@@ -1,7 +1,7 @@
 
   - VPS manager: [Digital Ocean](https://cloud.digitalocean.com/)
   - OS: [Ubuntu **18.04**.2 LTS]([http://releases.ubuntu.com/18.04/](http://releases.ubuntu.com/18.04/))
-  - Size: 1CPU, 2GB RAM, 50GB SSD, 2TB data (to upsize temporarily to 2CPUs,4GB RAM if installing r_packages_all)  
+  - Size: 1CPU, 2GB RAM, 50GB SSD, 2TB data (to upsize later when needed)  
   - Datacenter Region: *London*
   - IP: 
   - hostname: 
@@ -46,27 +46,27 @@
     ```
     
   - [ ] set public repo in  `/etc/environment`  as  **PUB_PATH**
--   [x] reboot:  `sudo reboot`
--   [x] add subfolders  `software`  and  `scripts`  to  `home`  folder
--   [x] add subfolders  `subs`  and  `r_packages`  to  `scripts`  subfolder
--   [x]  `cd subs`  then download from pastebin the files  _916041fv_  as  **public_subs.sh**  and  _zbzDnuHb_  as  **public_subs.lst**:  
+  - [ ] reboot:  `sudo reboot`
+  - [ ] add subfolders  `software`  and  `scripts`  to  `home`  folder
+  - [ ] add subfolders  `subs`  and  `r_packages`  to  `scripts`  subfolder
+  - [ ]  `cd subs`  then download from pastebin the files  _916041fv_  as  **public_subs.sh**  and  _zbzDnuHb_  as  **public_subs.lst**:  
     `wget -O public_subs.sh https://pastebin.com/raw/916041fv`  
     `wget -O public_subs.lst https://pastebin.com/raw/zbzDnuHb`
--   [x] convert to UNIX format:  `dos2unix public_subs.lst public_subs.sh`  or simply  `dos2unix *`
--   [x] make  **public_subs.sh**  executable:  `chmod +x public_subs.sh`
--   [x] run  **public_subs.sh**  to add subfolders to  _public_  repo:  `./public_subs.sh`
--   [x] follow the same steps as above to create subfolders in the  _home_  folder:  
+  - [ ] convert to UNIX format:  `dos2unix public_subs.lst public_subs.sh`  or simply  `dos2unix *`
+  - [ ] make  **public_subs.sh**  executable:  `chmod +x public_subs.sh`
+  - [ ] run  **public_subs.sh**  to add subfolders to  _public_  repo:  `./public_subs.sh`
+  - [ ] follow the same steps as above to create subfolders in the  _home_  folder:  
     `wget -O home_subs.sh https://pastebin.com/raw/XThRT4u4`  
     `wget -O home_subs.lst https://pastebin.com/raw/Ze6M1snP`
--   [x] deny the  `root`  user direct access via SSH:  `sudo nano /etc/ssh/sshd_config`  (restart SSH + check)
--   [x] change port to SSH:  `sudo nano /etc/ssh/sshd_config`  (restart SSH + check)
--   [x] enable firewall:  `sudo ufw enable`  (check)
--   [x] allow (new) SSH port:  `sudo ufw allow XYYYY`  (check)
--   [x] install webmin / allow port 10000 (check, remember it's only on  `https`)
--   [x] redirect http / change port / allow new port / delete previous port rule (check)
--   [x] add 2FA
+  - [ ] deny the  `root`  user direct access via SSH:  `sudo nano /etc/ssh/sshd_config`  (restart SSH + check)
+  - [ ] change port to SSH:  `sudo nano /etc/ssh/sshd_config`  (restart SSH + check)
+  - [ ] enable firewall:  `sudo ufw enable`  (check)
+  - [ ] allow (new) SSH port:  `sudo ufw allow XYYYY`  (check)
+  - [ ] install webmin / allow port 10000 (check, remember it's only on  `https`)
+  - [ ] redirect http / change port / allow new port / delete previous port rule (check)
+  - [ ] add 2FA
 -   [x] add a domain name (see  [Freenom](https://www.freenom.com/)  for a  _true_  free domain)
 -   [x] take a snapshot:  _webmin_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MTU5ODg0MSwtNTk1ODk3NDg0XX0=
+eyJoaXN0b3J5IjpbODQ1NTU4NDc5LC01OTU4OTc0ODRdfQ==
 -->
