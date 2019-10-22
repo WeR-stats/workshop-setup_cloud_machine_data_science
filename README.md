@@ -1,7 +1,7 @@
 # How to Setup a Cloud Server for Data Science
 
 **Author**: [Luca Valnegri](https://www.linkedin.com/in/lucavalnegri/)   
-**Last Updated**: 22-Oct-2019
+**Last Updated**: 2219-Oct-2019
 
 <a name="index"/>
 
@@ -632,7 +632,7 @@ then add at the bottom the following line:
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
 ~~~
  
-To add to the *R* environment the path of the *public* repository we defined earlier:
+To add to the *R* environment the path of the *public* repository we defined earlier to the *R* environment:
   - open the general *R* configuration file for editing:
     ~~~
     sudo nano $(R RHOME)/etc/Renviron
@@ -869,9 +869,13 @@ You can now open a browser and head to [http://ip_address/uk_petitions]() to see
     ~~~
   - **rgdal**:
     ~~~
-    sudo add-apt-repository ppa:ubuntugis/ppa
+    sudo add-apt-repository ppa:ubuntugis/ppaubuntugis-unstable
 	sudo apt-get update 
 	sudo apt-get install -y gdal-bin libgdal-dev
+    ~~~
+    But check [here](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa)  for the availability of the *stable*  release of the *UbuntuGIS* suite of spatial packages  for Ubuntu *Bionic* **18.04**, then replacsubstitute the first line in the above group with the following:
+    ~~~
+    sudo add-apt-repository ppa:ubuntugis/ppa
     ~~~
   - **rgeos**  (must be installed after previous dependencies):
     ~~~
@@ -1051,7 +1055,7 @@ We're going to install [PHP-FPM](https://php-fpm.org/), a FastCGI implementation
     ~~~
   - check the web server is running:
     ~~~
-    sudo systemctl status nginx
+    sudo systemctl statusreload nginx
     ~~~
   - to test if the *php* interpreter  is actually working, create a new file in the webroot directory:
     ~~~
@@ -1164,10 +1168,10 @@ As we've seen before, from the server's point of view a shiny app is nothing mor
     ~~~
     location /shiny/appname/ {
       auth_basic "Username and Password are required"; 
-      auth_basic_user_file /usr/local/share/public/shiny_server/pwds/appname.pwds;
+      auth_basic_user_file /usr/local/share/public/shiny_server/pwds/appname._pwds;
     }
     ~~~
-    Notice that you should have one and only of the above for each `appname`, although the reference file `appname.pwds` could be the same for more than one app
+    Notice that you should have one and only of the above for each `appname`, although the reference file `appname._pwds` could be the same for more than one app
   - check the configuration is correct:
     ~~~
     sudo nginx -t
@@ -1293,7 +1297,7 @@ Some of the above packages requires the following libraries to be installed befo
     ~~~
   - pytorch:
     ~~~
-    pip3 install --user https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl
+    pip3 install --user https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl  
     ~~~
     If any error shows up, you should first ensure your version of Python is 3.7.x, as indicated in the above filename. If your version of Python is different, try first to adjust the filename according to the version number. 
   - if using *Theano* or *Keras* it's better to also install the *OpenBLAS* libraries to improve performance:
@@ -1353,6 +1357,7 @@ Once installed using the previous process, execute the following commands:
     IRkernel::installspec()
     ~~~
 
+
 Notice that the above process refers to a single user setup. For multi-users servers, look at [JupyterHub](https://github.com/jupyterhub/jupyterhub), which is outside of the scope of the current tutorial.
 
 
@@ -1396,7 +1401,7 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
     sudo mysql_secure_installation
     ~~~
     skip the first question, then insert a strong new password for *root*, and finally answer **Yes** to all the remaining questions.
-  - login as root (when asked, enter the password you choose in the previous step):
+  - login as root, (when asked, enter the password you choose in the previous step)step before:
     ~~~
     sudo mysql -u root -p
     ~~~
@@ -1407,7 +1412,7 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
       GRANT ALL PRIVILEGES ON *.* TO 'devs'@'localhost';
       FLUSH PRIVILEGES;
       ~~~
-    - apps and/or remote, with a read-only privilege:
+    - apps and/or remote, with a read-only privilege, possibly working from remote if you decide to build separate machines for *data storage* and *production*:
       ~~~
       CREATE USER 'shiny'@'localhost' IDENTIFIED BY 'pwd';
       GRANT SELECT ON *.* TO 'shiny'@'localhost';
@@ -1415,9 +1420,10 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
       GRANT SELECT ON *.* TO 'shiny'@'%';
       FLUSH PRIVILEGES;
       ~~~
-      Notice that it is really necessary for the *shiny* user to have both the *localhost* and the *%* statements to be able to connect from *anywhere*. Moreover, if it is known beforehand the exact IP address of the machine where the user is going to query from, then that IP should be included in the above statements, instead of the percent sign.
+      Notice that it is really necessary for the *shiny* user to have both the *localhost* and the *%* statements to be able to connect from *anywhere* as *shiny*. Moreover, if it is known beforehand the exact IP address of the machineip where the shiny user is going to query from, then that IPip should be included in the above statements, instead of the percent sign.
       
-    In a similar way, it is possible to create additional *personal* users. See [here](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html) for a list of all possible specifications for the privileges.    
+    In a similar way, it is possible to create additional *personal* users. See [here](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html) for a list of all possible specifications for the privileges.
+    
   -  `exit` MySQL server
 
 If you've created, as above, a user with potential remote access, you also have to:
@@ -1440,22 +1446,22 @@ If you've created, as above, a user with potential remote access, you also have 
       ~~~
 
 We're now in a position to add credentials in a way that avoid people to see password in clear in scripts: 
-  - open the *users* configuration file for editing:
+  - open the *users*MySQL configuration file for editing:
     ~~~
-    sudo nano /etc/mysql/my.cnf
-    ~~~
+    `sudo nano /etc/mysql/my.cnf
+    ~~~`
   - scroll at the end and add the desired credential(s):
-    ~~~
+    ~~~```
     [groupname]
     host = ip_address
     user = usrname
     password = 'password'
     database = dbname
-    ~~~
+    ~~~```
   - restart the server:
     ~~~
-    sudo service mysql restart
-    ~~~
+    `sudo service mysql restart
+    ~~~`
 
   <a name="tweak-mysql"/>
 
@@ -1467,7 +1473,8 @@ We're now in a position to add credentials in a way that avoid people to see pas
     ~~~
   - add at the end the following block of code:
     ~~~
-    [mysqld]
+    ~~~
+[mysqld]
     init_connect='SET collation_connection = utf8_unicode_ci'
     init_connect='SET NAMES utf8'
     character-set-server=utf8
@@ -1495,27 +1502,28 @@ We're now in a position to add credentials in a way that avoid people to see pas
   <a name="dbninja"/>
 
 #### Install DbNinja, a web client to MySQL Server
-This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* processor already installed on the system. We already have installed *nginx*, so we only need to install *php*.
+This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* processor already installed on the system. We already have installed *nginx*, so we only need, so we have to install *php*.
   - download the client software:
-    ~~~
+    ~~~```
     cd ~/software
     wget http://dbninja.com/download/dbninja.tar.gz
-    ~~~
+    ~~~```
   - create subdirectory in web root (not necessarily the one chosen below):
-    ~~~
+    ~~~```
     sudo mkdir /var/www/html/sql
-    ~~~
+    ~~~```
   - copy content of zip file in the above directory:
-    ~~~
+    ~~~```
     sudo tar -xvzf dbninja.tar.gz -C /var/www/html/sql --strip-components=1
-    ~~~
+    ~~~```
   - open the homepage of your new *DbNinja* *MySQL* client at [http://ip_address/sql](), and agree to T&C
   - check and insert the filename as requested:
     ~~~
-    sudo ls /var/www/html/sql/_users/
-    ~~~
+```
+     sudo ls /var/www/html/sql/_users/
+    ~~~```
   - insert a strong password
-  - login as *admin* using the previous password (this is neither the *MySQL* nor the *Ubuntu* credentials) 
+  - login as *admin* using the previous password (this is not either the *MySQL* nor the *Ubuntu* credentials) 
   - open the top left menu *DbNinja*, then *Settings*, then the *Settings* tab, and check `Hide the ...`. Click *Save*.
   - to add any *MySQL* Server, open the top left menu *DbNinja*, and under *MySQL Hosts* tab click *Add Host* , complete with the desired *MySQL* username (don't save the password for better security), and finally click *Save*
 
@@ -2322,3 +2330,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 
 ---
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTYzNzg0NDM5M119
+-->
