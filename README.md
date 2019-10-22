@@ -1,7 +1,7 @@
 # How to Setup a Cloud Server for Data Science
 
 **Author**: [Luca Valnegri](https://www.linkedin.com/in/lucavalnegri/)   
-**Last Updated**: 19-Oct-2019
+**Last Updated**: 22-Oct-2019
 
 <a name="index"/>
 
@@ -45,6 +45,8 @@
   * [Storage engines](#storage-engines)
     + [MySQL Server](#mysql)
       - [MySQL Web Cient: *DbNinja*](#dbninja)
+    + [MS SQL Server](#mssql)
+    + [PostgreSQL](#postgres)
     + [Neo4j](#neo4j)
     + [MongoDB](#mongodb)
     + [Redis](#redis)
@@ -62,6 +64,7 @@
     + [Add SSH Key Pair for Enhanced Security](#droplet-with-ssh-key)
       - [Windows users](#with-key-windows)
       - [Linux and macOS users](#with-key-linux-macos)
+    + [Node.js](#node)
   * [Appendix: Linux Basics](#linux-basics)
     + [Files and Folders](#linux-files-folders)
       - [Root Directory Structure](#linux-directory-structure)
@@ -85,7 +88,7 @@ If you’ve always wanted to have:
 
 the following notes will help you!
 
-This tutorial is quite lengthy, as it is full of details for the novice.
+This tutorial is quite lengthy, as it is full of details for the novice. If you just want the step-by-step list, a sort of cloud server setup cheat-sheet, it's more convenient for you to follow [this document](https://github.com/WeR-stats/workshop-setup_cloud_machine_data_science/blob/master/TL%3BDR.md) instead.
 
 <br/>
 
@@ -619,8 +622,17 @@ In case you want to create an entirely new droplet from a snapshot:
     ~~~
     sudo apt-get install -y r-base r-base-dev
     ~~~
+
+Note that to install *R* 3.6 core and packages, an additional source entry is needed. You need to manually open the file list for editing:
+~~~
+sudo nano /etc/apt/sources.list
+~~~
+then add at the bottom the following line:
+~~~
+deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
+~~~
  
-To add to the *R* environment the path of the *public* repository we defined earlier to the *R* environment:
+To add to the *R* environment the path of the *public* repository we defined earlier:
   - open the general *R* configuration file for editing:
     ~~~
     sudo nano $(R RHOME)/etc/Renviron
@@ -857,13 +869,9 @@ You can now open a browser and head to [http://ip_address/uk_petitions]() to see
     ~~~
   - **rgdal**:
     ~~~
-    sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+    sudo add-apt-repository ppa:ubuntugis/ppa
 	sudo apt-get update 
 	sudo apt-get install -y gdal-bin libgdal-dev
-    ~~~
-    But check [here](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa)  for the availability of the *stable*  release of the *UbuntuGIS* suite of spatial packages  for Ubuntu *Bionic* **18.04**, then replacsubstitute the first line in the above group with the following:
-    ~~~
-    sudo add-apt-repository ppa:ubuntugis/ppa
     ~~~
   - **rgeos**  (must be installed after previous dependencies):
     ~~~
@@ -1043,7 +1051,7 @@ We're going to install [PHP-FPM](https://php-fpm.org/), a FastCGI implementation
     ~~~
   - check the web server is running:
     ~~~
-    sudo systemctl reload nginx
+    sudo systemctl status nginx
     ~~~
   - to test if the *php* interpreter  is actually working, create a new file in the webroot directory:
     ~~~
@@ -1156,10 +1164,10 @@ As we've seen before, from the server's point of view a shiny app is nothing mor
     ~~~
     location /shiny/appname/ {
       auth_basic "Username and Password are required"; 
-      auth_basic_user_file /usr/local/share/public/shiny_server/pwds/appname_pwds;
+      auth_basic_user_file /usr/local/share/public/shiny_server/pwds/appname.pwds;
     }
     ~~~
-    Notice that you should have one and only of the above for each `appname`, although the reference file `appname_pwds` could be the same for more than one app
+    Notice that you should have one and only of the above for each `appname`, although the reference file `appname.pwds` could be the same for more than one app
   - check the configuration is correct:
     ~~~
     sudo nginx -t
@@ -1285,7 +1293,7 @@ Some of the above packages requires the following libraries to be installed befo
     ~~~
   - pytorch:
     ~~~
-    pip3 install --user https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl  
+    pip3 install --user https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl
     ~~~
     If any error shows up, you should first ensure your version of Python is 3.7.x, as indicated in the above filename. If your version of Python is different, try first to adjust the filename according to the version number. 
   - if using *Theano* or *Keras* it's better to also install the *OpenBLAS* libraries to improve performance:
@@ -1345,7 +1353,6 @@ Once installed using the previous process, execute the following commands:
     IRkernel::installspec()
     ~~~
 
-
 Notice that the above process refers to a single user setup. For multi-users servers, look at [JupyterHub](https://github.com/jupyterhub/jupyterhub), which is outside of the scope of the current tutorial.
 
 
@@ -1384,12 +1391,12 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
     ~~~
     sudo apt-get -y install mysql-server
     ~~~
-  - secure root login:
+  - secure root login and other option:
     ~~~
     sudo mysql_secure_installation
     ~~~
     skip the first question, then insert a strong new password for *root*, and finally answer **Yes** to all the remaining questions.
-  - login as root, when asked enter the password you choose in the step before:
+  - login as root (when asked, enter the password you choose in the previous step):
     ~~~
     sudo mysql -u root -p
     ~~~
@@ -1400,7 +1407,7 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
       GRANT ALL PRIVILEGES ON *.* TO 'devs'@'localhost';
       FLUSH PRIVILEGES;
       ~~~
-    - apps, with a read-only privilege, possibly working from remote if you decide to build separate machines for *data storage* and *production*:
+    - apps and/or remote, with a read-only privilege:
       ~~~
       CREATE USER 'shiny'@'localhost' IDENTIFIED BY 'pwd';
       GRANT SELECT ON *.* TO 'shiny'@'localhost';
@@ -1408,39 +1415,66 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
       GRANT SELECT ON *.* TO 'shiny'@'%';
       FLUSH PRIVILEGES;
       ~~~
-      Notice that it is really necessary for the *shiny* user to have both the *localhost* and the *%* statements to be able to connect from *anywhere* as *shiny*. Moreover, if it is known beforehand the exact ip where the shiny user is going to query from, then that ip should be included in the above statements, instead of the percent sign.
-
-    In a similar way, it is possible to create additional *personal* users. See [here](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html) for a list of all possible specifications for the privileges.
-    
+      Notice that it is really necessary for the *shiny* user to have both the *localhost* and the *%* statements to be able to connect from *anywhere*. Moreover, if it is known beforehand the exact IP address of the machine where the user is going to query from, then that IP should be included in the above statements, instead of the percent sign.
+      
+    In a similar way, it is possible to create additional *personal* users. See [here](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html) for a list of all possible specifications for the privileges.    
   -  `exit` MySQL server
 
+If you've created, as above, a user with potential remote access, you also have to:
+  - add a rule in the firewall to open the MySQL port `3306:
+    ~~~
+    sudo ufw allow 3306
+    ~~~
+  - change a setting in the server configuration, that by default close down any networking possibility:
+    - open the *server* configuration file for editing:
+      ~~~
+      sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+      ~~~
+    - find the following line:
+      ~~~
+      bind-address 127.0.0.1
+      ~~~
+      and change it to:
+      ~~~
+      bind-address 0.0.0.0
+      ~~~
+
 We're now in a position to add credentials in a way that avoid people to see password in clear in scripts: 
-  - open the MySQL configuration file for editing:
-    `sudo nano /etc/mysql/my.cnf`
+  - open the *users* configuration file for editing:
+    ~~~
+    sudo nano /etc/mysql/my.cnf
+    ~~~
   - scroll at the end and add the desired credential(s):
-    ```
+    ~~~
     [groupname]
     host = ip_address
     user = usrname
     password = 'password'
     database = dbname
-    ```
+    ~~~
   - restart the server:
-    `sudo service mysql restart`
+    ~~~
+    sudo service mysql restart
+    ~~~
 
   <a name="tweak-mysql"/>
 
 #### Tweak MySQL Server
 
-~~~
-[mysqld]
-init_connect='SET collation_connection = utf8_unicode_ci'
-init_connect='SET NAMES utf8'
-character-set-server=utf8
-collation-server=utf8_unicode_ci
-skip-character-set-client-handshake
-default-storage-engine=MYISAM
-~~~
+  - open the *users* configuration file for editing:
+    ~~~
+    sudo nano /etc/mysql/my.cnf
+    ~~~
+  - add at the end the following block of code:
+    ~~~
+    [mysqld]
+    init_connect='SET collation_connection = utf8_unicode_ci'
+    init_connect='SET NAMES utf8'
+    character-set-server=utf8
+    collation-server=utf8_unicode_ci
+    skip-character-set-client-handshake
+    default-storage-engine=MYISAM
+    ~~~
 
 
   <a name="rmysql"/>
@@ -1461,29 +1495,143 @@ default-storage-engine=MYISAM
   <a name="dbninja"/>
 
 #### Install DbNinja, a web client to MySQL Server
-This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* processor already installed on the system. We already have , so we have to install php.
+This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* processor already installed on the system. We already have installed *nginx*, so we only need to install *php*.
   - download the client software:
-    ```
+    ~~~
     cd ~/software
     wget http://dbninja.com/download/dbninja.tar.gz
-    ```
+    ~~~
   - create subdirectory in web root (not necessarily the one chosen below):
-    ```
+    ~~~
     sudo mkdir /var/www/html/sql
-    ```
+    ~~~
   - copy content of zip file in the above directory:
-    ```
+    ~~~
     sudo tar -xvzf dbninja.tar.gz -C /var/www/html/sql --strip-components=1
-    ```
+    ~~~
   - open the homepage of your new *DbNinja* *MySQL* client at [http://ip_address/sql](), and agree to T&C
   - check and insert the filename as requested:
-    ```
-     sudo ls /var/www/html/sql/_users/
-    ```
+    ~~~
+    sudo ls /var/www/html/sql/_users/
+    ~~~
   - insert a strong password
-  - login as *admin* using the previous password (this is not either the *MySQL* or the *Ubuntu* credentials) 
+  - login as *admin* using the previous password (this is neither the *MySQL* nor the *Ubuntu* credentials) 
   - open the top left menu *DbNinja*, then *Settings*, then the *Settings* tab, and check `Hide the ...`. Click *Save*.
   - to add any *MySQL* Server, open the top left menu *DbNinja*, and under *MySQL Hosts* tab click *Add Host* , complete with the desired *MySQL* username (don't save the password for better security), and finally click *Save*
+
+
+  <a name="mssql"/>
+
+### MS SQL Server (relational database)
+[MS SQL Server](https://www.microsoft.com/en-gb/sql-server/sql-server-2017) is a relational database system by Microsoft that was open-sourced in 2016.
+
+  - add the GPG key for the system to trust MS SQL apt repository packages:
+    ~~~
+    sudo wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    ~~~
+  - add SQL server apt repository to your Ubuntu 18.04 system (notice that the reference in the command to previous Ubuntu version 16.04 is actually correct):
+    ~~~
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+    ~~~
+    If after the updating the following, or similar, error message appears:
+    ~~~
+    The following signatures couldn't be verified because the public key is not available: NO_PUBKEY EB3E94ADBE1229CF
+    ~~~
+    you have to manually add that key to the trusted keyset of the apt packaging system: 
+    ~~~
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
+    sudo apt-get update 
+    ~~~
+    If the key that your system is missing differs, simply replace the key at the end of the above command with your key, and run it.
+  - install the mssql-server software:
+    ~~~
+    sudo apt-get install -y mssql-server
+    ~~~
+  - run the *setup* package (when asked, choose option **3** for the *free* edition):
+    ~~~
+    sudo /opt/mssql/bin/mssql-conf setup
+    ~~~
+  - once the configuration is done, verify that the service is up and running:
+    ~~~
+    systemctl status mssql-server
+    ~~~
+
+After the Server installation, we also need to install some additional tool to connect and run T-SQL statements on the server:
+  - add the MS products apt repository to the system
+    ~~~
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"    
+    ~~~
+  - install MS SQL tools and the unixODBC plugin:
+    ~~~
+    sudo apt-get install -y mssql-tools unixodbc-dev
+    ~~~
+  - connect to the server (notice that *SA* is the name for the admin user):
+    ~~~
+    sqlcmd -S localhost -U SA -P 'password'
+    ~~~
+      if you get a `sqlcmd: command not found` error, then you need to create a *symlink* to make a virtual copy of the :
+    ~~~
+    sudo ln -sfn /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd
+    ~~~
+  - let's check the default databases are all there:
+    ~~~
+    1> SELECT name FROM sys.databases
+    2> go
+    name
+    -------------------------------------------------------------------------------------
+    master
+    tempdb
+    model
+    msdb
+    test
+    (5 rows affected)
+    ~~~
+  - for a more extensive check, let's create a *test* table in the *tempdb* database, add some records, query their existence, then finally drop the table :
+    ~~~
+    1> USE tempdb
+    2> CREATE TABLE test (id  INT, name  NVARCHAR(50), quantity INT)
+    3> INSERT INTO test VALUES (1, 'one', 10)
+    4> INSERT INTO test VALUES (2, 'two', 200)
+    5> INSERT INTO test VALUES (3, 'three', 3000)
+    6> go
+    Changed database context to 'tempdb'.
+    (1 rows affected)
+    (1 rows affected)
+    (1 rows affected)
+    
+    1> SELECT * FROM test
+    2> go
+    id          name                                               quantity
+    ----------- -------------------------------------------------- -----------
+              1 one                                                         10
+              2 two                                                        200
+              3 three                                                     3000
+    (3 rows affected)
+    
+    1> DROP TABLE test
+    2> go
+    
+    1> exit
+    ~~~
+
+To connect to Sql Server from remote machines you need first to open the TCP port where SQL Server listens for connections. By default, this port is set to `1433`, but we're going to change at once for security reasons.. To change the port, run first the following commands, replacing the `xxxx` string with your desired integer number:
+~~~
+sudo /opt/mssql/bin/mssql-conf set network.tcpport xxxx
+~~~
+then restart the server to 
+~~~
+systemctl restart mssql-server.service
+~~~
+Finally, open the port in the firewall:
+~~~
+sudo ufw allow xxxx
+~~~
+When connecting from remote, you now have to specify the port beside the IP address:
+~~~
+sqlcmd -S ipaddress,port -U usrname -P 'password'
+~~~
+
+From inside *R* you have multiple possibilities to connect to sql server.
 
 
   <a name="mongodb"/>
@@ -2174,6 +2322,3 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 
 ---
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMTY3ODIyMywxNzE5Nzk1NTgxXX0=
--->
