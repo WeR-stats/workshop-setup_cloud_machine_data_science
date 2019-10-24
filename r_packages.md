@@ -377,7 +377,8 @@
   - [qualpalr](https://github.com/jolars/qualpalr) - Another package able to generate *distinct qualitative* color palettes inspired by [IWantHue](http://tools.medialab.sciences-po.fr/iwanthue/)
   - [randomcoloR](https://github.com/ronammar/randomcoloR) - Simple methods to generate *attractive* random colors, as a wrapper of the JS library [randomColor.js](https://github.com/davidmerfield/randomColor), or *optimally distinct* colors based on k-means, inspired by [IWantHue](http://tools.medialab.sciences-po.fr/iwanthue/)
   - [Cairo](https://cran.r-project.org/package=Cairo/) - R graphics device using the [cairo graphics library](https://www.cairographics.org/) for creating high-quality graphics output
-  - [paletteer](https://github.com/EmilHvitfeldt/paletteer) - An attempt to collect most 
+  - [paletteer](https://github.com/EmilHvitfeldt/paletteer) - An attempt to collect most of the color palettes $R$ packages, using a common interface.
+
   <a name="icons"/>
 
 #### Icons, Fonts
@@ -835,6 +836,6 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NDk5NDcwOCwtMjEwMzM2MDQzMSw4MT
-kzODU2NzcsOTYxMTUwMDUxXX0=
+eyJoaXN0b3J5IjpbLTEyOTIyNDc0NjMsLTIxMDMzNjA0MzEsOD
+E5Mzg1Njc3LDk2MTE1MDA1MV19
 -->
