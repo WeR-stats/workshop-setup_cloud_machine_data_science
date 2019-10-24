@@ -1433,17 +1433,17 @@ If you've created, as above, a user with potential remote access, you also have 
     ~~~
   - change a setting in the server configuration, that by default close down any networking possibility:
     - open the *server* configuration file for editing:
-      ~~~
+    ~~~
       sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
-      ~~~
+    ~~~
     - find the following line:
-      ~~~
+    ~~~
       bind-address 127.0.0.1
-      ~~~
+    ~~~
       and change it to:
-      ~~~
+    ~~~
       bind-address 0.0.0.0
-      ~~~
+    ~~~
 
 We're now in a position to add credentials in a way that avoid people to see password in clear in scripts: 
   - open the *users*MySQL configuration file for editing:
@@ -2331,5 +2331,5 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbMTM4NTA4NjQ2NSwtMzM1NDU0NzgzXX0=
 -->
