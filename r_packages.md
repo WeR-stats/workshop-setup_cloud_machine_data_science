@@ -228,7 +228,7 @@
   - [vcd](https://cran.r-project.org/package=vcd/) - Visualization tools and tests for categorical data
   - [vcdExtra](https://cran.r-project.org/package=vcdExtra/) - Complement to the *vcd*  and the *gnm* packages
   - [gridExtra](http://github.com/baptiste/gridextra/wiki) - Provides a number of user-level functions to work with *grid* graphics
-  - [animint](http://github.com/tdhock/animint) `install_github('tdhock/animint')` - Provide tools to design multi-layer, multi-plot, interactive, and possibly animated data visualizations using *ggplot2*, and rendering with [D3](http://d3js.org/)
+  - [animint2](http://github.com/tdhock/animint2) - Provide tools to design multi-layer, multi-plot, interactive, and possibly animated data visualizations using *ggplot2*, and rendering with [D3](http://d3js.org/)
   - [sjplot](https://github.com/strengejacke/sjPlot) - Collection of plotting and table output functions for data visualization, with a focus on Statistics in Social Science 
   - [trelliscope](https://github.com/delta-rho/trelliscope) - Provides a scalable way to flexibly visualize large, complex data in great detai
   - [tabplot](https://github.com/mtennekes/tabplot) - Provides visualization methods to explore and analyse large multivariate datasets.
@@ -836,5 +836,5 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxMTUwMDUxXX0=
+eyJoaXN0b3J5IjpbODE5Mzg1Njc3LDk2MTE1MDA1MV19
 -->
