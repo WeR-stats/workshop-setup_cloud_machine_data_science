@@ -1434,22 +1434,22 @@ If you've created, as above, a user with potential remote access, you also have 
   - change a setting in the server configuration, that by default close down any networking possibility:
     - open the *server* configuration file for editing:
     ~~~
-      sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
     ~~~
     - find the following line:
     ~~~
-      bind-address 127.0.0.1
+    bind-address 127.0.0.1
     ~~~
       and change it to:
     ~~~
-      bind-address 0.0.0.0
+    bind-address 0.0.0.0
     ~~~
 
 We're now in a position to add credentials in a way that avoid people to see password in clear in scripts: 
   - open the *users*MySQL configuration file for editing:
     ~~~
     `sudo nano /etc/mysql/my.cnf
-    ~~~`
+    ~~~
   - scroll at the end and add the desired credential(s):
     ~~~```
     [groupname]
@@ -1457,11 +1457,11 @@ We're now in a position to add credentials in a way that avoid people to see pas
     user = usrname
     password = 'password'
     database = dbname
-    ~~~```
+    ~~~
   - restart the server:
     ~~~
-    `sudo service mysql restart
-    ~~~`
+    sudo service mysql restart
+    ~~~
 
   <a name="tweak-mysql"/>
 
@@ -1473,8 +1473,7 @@ We're now in a position to add credentials in a way that avoid people to see pas
     ~~~
   - add at the end the following block of code:
     ~~~
-    ~~~
-[mysqld]
+    [mysqld]
     init_connect='SET collation_connection = utf8_unicode_ci'
     init_connect='SET NAMES utf8'
     character-set-server=utf8
@@ -1504,22 +1503,21 @@ We're now in a position to add credentials in a way that avoid people to see pas
 #### Install DbNinja, a web client to MySQL Server
 This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* processor already installed on the system. We already have installed *nginx*, so we only need, so we have to install *php*.
   - download the client software:
-    ~~~```
+    ~~~
     cd ~/software
     wget http://dbninja.com/download/dbninja.tar.gz
-    ~~~```
+    ~~~
   - create subdirectory in web root (not necessarily the one chosen below):
-    ~~~```
+    ~~~
     sudo mkdir /var/www/html/sql
-    ~~~```
+    ~~~
   - copy content of zip file in the above directory:
-    ~~~```
+    ~~~
     sudo tar -xvzf dbninja.tar.gz -C /var/www/html/sql --strip-components=1
-    ~~~```
+    ~~~
   - open the homepage of your new *DbNinja* *MySQL* client at [http://ip_address/sql](), and agree to T&C
   - check and insert the filename as requested:
     ~~~
-```
      sudo ls /var/www/html/sql/_users/
     ~~~```
   - insert a strong password
@@ -2331,5 +2329,5 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NTA4NjQ2NSwtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbMTE0ODk4MjA3OSwtMzM1NDU0NzgzXX0=
 -->
