@@ -1518,8 +1518,8 @@ This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* p
   - open the homepage of your new *DbNinja* *MySQL* client at [http://ip_address/sql](), and agree to T&C
   - check and insert the filename as requested:
     ~~~
-     sudo ls /var/www/html/sql/_users/
-    ~~~```
+    sudo ls /var/www/html/sql/_users/
+    ~~~
   - insert a strong password
   - login as *admin* using the previous password (this is not either the *MySQL* nor the *Ubuntu* credentials) 
   - open the top left menu *DbNinja*, then *Settings*, then the *Settings* tab, and check `Hide the ...`. Click *Save*.
@@ -1604,7 +1604,8 @@ After the Server installation, we also need to install some additional tool to c
     (1 rows affected)
     (1 rows affected)
     (1 rows affected)
-    
+    ~~~
+    ~~~
     1> SELECT * FROM test
     2> go
     id          name                                               quantity
@@ -1613,7 +1614,8 @@ After the Server installation, we also need to install some additional tool to c
               2 two                                                        200
               3 three                                                     3000
     (3 rows affected)
-    
+    ~~~
+    ~~~
     1> DROP TABLE test
     2> go
     
@@ -2329,5 +2331,5 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0ODk4MjA3OSwtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
