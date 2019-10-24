@@ -315,7 +315,6 @@
   - [ggmosaic](https://github.com/haleyjeppson/ggmosaic) - Add mosaic functionality to ggplots
   - [ggnetwork](http://github.com/briatte/ggnetwork) - Add geometry to plot networks
   - [ggnet](http://github.com/briatte/ggnet) `install_github('briatte/ggnet')` - 
-  - [ggplus](http://github.com/guiastrennec/ggplus) `install_github('guiastrennec/ggplus')` - A set of additional functions for ggplot2
   - [ggpol](https://github.com/erocoar/ggpol) -  adds parliament diagrams and various other visualizations and convenience functions to ggplot2
   - [ggpmisc](https://bitbucket.org/aphalo/ggpmisc) - Miscellaneous Extensions to *ggplot2*
   - [ggpubr](https://github.com/kassambara/ggpubr) - Provides some easy-to-use functions for creating and customizing ‘ggplot2’- based publication ready plots.
@@ -836,5 +835,6 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE5Mzg1Njc3LDk2MTE1MDA1MV19
+eyJoaXN0b3J5IjpbLTIxMDMzNjA0MzEsODE5Mzg1Njc3LDk2MT
+E1MDA1MV19
 -->
