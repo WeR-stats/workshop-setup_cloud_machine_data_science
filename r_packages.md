@@ -1,7 +1,7 @@
 # Notable *R* Packages for Data Science
 
 **Author**: [Luca Valnegri](https://www.linkedin.com/in/lucavalnegri/)   
-**Last Updated**: 06-Jan-2019
+**Last Updated**: 30-Oct-2019
 
 ---
   * [Data Sourcing](#sourcing)
@@ -836,6 +836,6 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTIyNDc0NjMsLTIxMDMzNjA0MzEsOD
-E5Mzg1Njc3LDk2MTE1MDA1MV19
+eyJoaXN0b3J5IjpbLTcyNzI4OTIyMywtMTI5MjI0NzQ2MywtMj
+EwMzM2MDQzMSw4MTkzODU2NzcsOTYxMTUwMDUxXX0=
 -->
