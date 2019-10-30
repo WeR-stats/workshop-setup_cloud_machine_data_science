@@ -857,8 +857,8 @@ There is a repository on the [WeR GiHub](https://github.com/WeR-stats) website c
 
 If you still haven't installed any package, besides *shiny* and *rmarkdown*, let's install the ones needed for the app to run correctly. We first need to install some system dependencies though.
 ~~~
-sudo apt-get install curl libssl-dev libcurl4-gnutls-dev
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable 
+sudo apt-get install -y curl libssl-dev libcurl4-gnutls-dev
+sudo add-apt-repository ppa:ubuntugis/ppa 
 sudo apt-get update 
 sudo apt-get install gdal-bin libgdal-dev libgeos++-dev libudunits2-dev libv8-dev libjq-dev libcairo2-dev libxt-dev
 ~~~
@@ -914,13 +914,9 @@ You can now open a browser and head to [http://ip_address/uk_petitions]() to see
     ~~~
   - **rgdal**:
     ~~~
-    sudo add-apt-repository ppa:ubuntugis/ppaubuntugis-unstable
+    sudo add-apt-repository ppa:ubuntugis/ppa
 	sudo apt-get update 
 	sudo apt-get install -y gdal-bin libgdal-dev
-    ~~~
-    But check [here](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa)  for the availability of the *stable*  release of the *UbuntuGIS* suite of spatial packages  for Ubuntu *Bionic* **18.04**, then replacsubstitute the first line in the above group with the following:
-    ~~~
-    sudo add-apt-repository ppa:ubuntugis/ppa
     ~~~
   - **rgeos**  (must be installed after previous dependencies):
     ~~~
@@ -2376,9 +2372,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NDk0NjQwMiw4MzUyOTUyNDAsLTEyOT
-UzMTcyNiwtMTk3ODA0NTE1MSw5NTgzNDMzNjYsMTYyNzY3MTI3
-LDY0OTQxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMD
-M0ODQ5MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1
-MywtMTEyNzMzMDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbNjQzNTk1NSw4MzUyOTUyNDAsLTEyOTUzMT
+cyNiwtMTk3ODA0NTE1MSw5NTgzNDMzNjYsMTYyNzY3MTI3LDY0
+OTQxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0OD
+Q5MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1Mywt
+MTEyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
