@@ -605,7 +605,7 @@ Once you own a domain, head to the [Digital Ocean](https://cloud.digitalocean.co
     - in the `HOSTNAME` textbox enter `@` 
     - in the `WILL DIRECT TO` textbox choose the server to associate with that 
     - finally click `Create Record`
-  - repeat the last two steps after entering `www`  in the `HOSTNAME` textbox 
+  - repeat the last two steps after entering the string `www`  in the `HOSTNAME` textbox 
 
 Now you should simply wait from a few seconds to a few hours, depending on how fast the global sytem will update your changes, and if you head to [http://hostname]() you should see the same content as [http://ip_address](). Currently, though, the only content you can check is the *Webmin* service, but we'll soon add lots of bells and whistles!
 
@@ -621,7 +621,7 @@ To snapshot a droplet:
     sudo shutdown now
     ~~~
   - login into your DO account, head for the droplet dashboard, and from the left menu click  `Snapshots`, enter a memorable name in the textbox, then click `Take Snapshot`
-  - oOnce the process has finished, you can start the droplet again using the switch on the upper right
+  - once the process has finished, you can start the droplet again using the switch on the upper right
 
 To restore a snapshot on the droplet it was created from:
   - head for the snapshots page of the droplet from which the requested snapshot was created. You can also click `Manage` > `Snapshots` from the main menu on the left to see all the snapshots you've created
@@ -2376,9 +2376,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTU3ODQ1NjEsLTE5NzgwNDUxNTEsOT
-U4MzQzMzY2LDE2Mjc2NzEyNyw2NDk0MTA5ODgsLTE1Mjg2Nzkx
-NzksNjkzMDkwNjIzLDEyMTAzNDg0OTIsLTQ1Mjg5ODA3MywxOT
-I1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1
-NDc4M119
+eyJoaXN0b3J5IjpbLTEyOTUzMTcyNiwtMTk3ODA0NTE1MSw5NT
+gzNDMzNjYsMTYyNzY3MTI3LDY0OTQxMDk4OCwtMTUyODY3OTE3
+OSw2OTMwOTA2MjMsMTIxMDM0ODQ5MiwtNDUyODk4MDczLDE5Mj
+UxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3MywtMzM1NDU0
+NzgzXX0=
 -->
