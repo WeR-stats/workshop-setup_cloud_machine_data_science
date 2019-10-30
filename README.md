@@ -274,7 +274,7 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
   <a name="add-public"/>
 
 ### Add *public* group and repository
-One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is related to file *permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: rad, write, execute, that can be by three subjects: the owner of the file, the group  
+One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is related to file *permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: rad, write, execute, that can be by three subjects: the owner of the file, a particular group and all the *other* users. When you list the content of a directory you can see that each file has a list of nine binary numbers attached to it. these numbers must be read in group of three the first  
 There are a few different solutions, each with its own ups and downs. This solution will become practical also when using docker containers to deploy shiny applications..
 ~~~
 sudo groupadd public
@@ -2332,6 +2332,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM3NDIzODksMTkyNTE3MTgwOSwyMTE4NT
-IxOTUzLC0xMTI3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbLTExMTU5NDM2ODcsMTkyNTE3MTgwOSwyMT
+E4NTIxOTUzLC0xMTI3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
 -->
