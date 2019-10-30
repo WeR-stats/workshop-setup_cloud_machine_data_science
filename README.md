@@ -404,14 +404,14 @@ Lastly, let's add to the system an antivirus and a firewall. Starting with the a
     ~~~
     sudo apt-get install clamav clamav-daemon 
     ~~~
-  - stop the service and update the signature database:
+  - stop the service, then update the signature database:
     ~~~
-    systemctl stop clamav-freshclam
-    freshclam
+    sudo systemctl stop clamav-freshclam
+    sudo freshclam
     ~~~
   - start the clamav-freshclam service to keep the database updating in the background:
     ~~~
-    systemctl start clamav-freshclam
+    sudo systemctl start clamav-freshclam
     ~~~
   - to see the command line usage, run either of the following commands:
     ~~~
@@ -2376,7 +2376,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NDcwMjUxLDE2Mjc2NzEyNyw2NDk0MT
+eyJoaXN0b3J5IjpbOTU4MzQzMzY2LDE2Mjc2NzEyNyw2NDk0MT
 A5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIs
 LTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMj
 czMzAwNzMsLTMzNTQ1NDc4M119
