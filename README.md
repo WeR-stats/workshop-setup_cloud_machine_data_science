@@ -401,36 +401,36 @@ Login back again as the *new* user, and let's change the standard *ssh* port **2
 
 Lastly, let's add to the system an antivirus and a firewall. Starting with the antivurus, we're going to use the [ClamAV]() due to it being open source and 
   - install the software:
-    ```
+    ~~~
     sudo apt-get install clamav clamav-daemon 
-    ```
+    ~~~
   - stop the service and update the signature database:
-    ```
+    ~~~
     systemctl stop clamav-freshclam
     freshclam
-    ```
+    ~~~
   - start the clamav-freshclam service to keep the database updating in the background:
-    ```
+    ~~~
     systemctl start clamav-freshclam
-    ```
+    ~~~
   - to see the command line usage, run either of the following commands:
-    ```
+    ~~~
     clamscan --help
     man clamscan
-    ```
-  - to scan recursively *all* files in the home public directories, printing only the final summary:
-    ```
+    ~~~
+  - to scan recursively *all* files in the home users and the public repository, printing only the final summary:
+    ~~~
     clamscan -i -r /home/ /usr/local/share/public/
-    ```
+    ~~~
     The following are the exit return codes.
     - `0`: No virus found.
     - `1`: Virus(es) found.
     - `2`: Some error(s) occured.
   - clamscan can be quite CPU intensive. To limit the CPU time to certain levels, you can use two tools; 
-    - *cpulimit* to limit *absolute* cpu time 
-      ```
-      cpulimit -z -e clamscan -l 50 & clamscan -ir /
-      ```
+    - *cpulimit* to limit *absolute* cpu time: 
+       ~~~
+       cpulimit -z -e clamscan -l 50 & clamscan -ir /
+       ~~~
     - *nice* to lower the priority of clamscan, setting some limits to *relative* cpu time (as long as no other process requires cputime, clamscan will maximize it, but as soon as another process with a higher priority needs cputime, clamscan will lose it):
       ```
       nice -n 15 clamscan && clamscan -ir /
@@ -2376,8 +2376,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc0Mzc3MjQzLDE2Mjc2NzEyNyw2NDk0MT
-A5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIs
-LTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMj
-czMzAwNzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbLTg2NjY0MTExMiwxNjI3NjcxMjcsNjQ5ND
+EwOTg4LC0xNTI4Njc5MTc5LDY5MzA5MDYyMywxMjEwMzQ4NDky
+LC00NTI4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMT
+I3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
 -->
