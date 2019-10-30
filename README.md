@@ -667,17 +667,8 @@ In case you want to create an entirely new droplet from a snapshot:
     ~~~
     sudo apt-get install -y r-base r-base-dev
     ~~~
-
-Note that to install *R* 3.6 core and packages, an additional source entry is needed. You need to manually open the file list for editing:
-~~~
-sudo nano /etc/apt/sources.list
-~~~
-then add at the bottom the following line:
-~~~
-deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
-~~~
  
-To add to the *R* environment the path of the *public* repository we defined earlier to the *R* environment:
+We now add a constant to the *R* environment associated with the path of our *public* repository :
   - open the general *R* configuration file for editing:
     ~~~
     sudo nano $(R RHOME)/etc/Renviron
@@ -2376,9 +2367,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTUzMTcyNiwtMTk3ODA0NTE1MSw5NT
-gzNDMzNjYsMTYyNzY3MTI3LDY0OTQxMDk4OCwtMTUyODY3OTE3
-OSw2OTMwOTA2MjMsMTIxMDM0ODQ5MiwtNDUyODk4MDczLDE5Mj
-UxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3MywtMzM1NDU0
-NzgzXX0=
+eyJoaXN0b3J5IjpbMjA5NjA0NDU1NywtMTI5NTMxNzI2LC0xOT
+c4MDQ1MTUxLDk1ODM0MzM2NiwxNjI3NjcxMjcsNjQ5NDEwOTg4
+LC0xNTI4Njc5MTc5LDY5MzA5MDYyMywxMjEwMzQ4NDkyLC00NT
+I4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMTI3MzMw
+MDczLC0zMzU0NTQ3ODNdfQ==
 -->
