@@ -330,7 +330,7 @@ A possible quicker way to build a complete structure at once is to create a loop
   - make the above file an executable script:
     ~~~
     chmod +x ~/path/to/subdirs.sh
-    ~~~`
+    ~~~
   - run it as:
     ~~~
     ~/path/to/subdirs.sh
@@ -2339,7 +2339,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkzMDkwNjIzLDEyMTAzNDg0OTIsLTQ1Mj
-g5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAw
-NzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMT
+AzNDg0OTIsLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5
+NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
