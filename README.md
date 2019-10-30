@@ -126,8 +126,8 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
   - Click *Droplets* from the unfolding menu
   - For the installation step, you should create a VPS which is at least 2GB RAM, because a few packages require more than 1GB RAM to compile. You can always change up or down to some amount either number of CPUs or amount of RAM later.
      For the moment being, choose the following (moving top to bottom):
-    - Image / Distributions: `Ubuntu 18.04.x x64` (as 
-    - Plan / Starter (Standard): C 4TB, RAM 2GB, Power CP, Storage 50GB, Transfer 4TB
+    - Image / Distributions: `Ubuntu 18.04.x x64`
+    - Plan / Starter (Standard): C 4TB, RAM 2GB, Power CP, Storage 50GB, Transfer 2TB
 	- Datacenter Region: `London`
 	- Hostname: choose a memorable name ou can always change it later from inside the machine
 	- Tags: choose the reference project. I guess you only have the default one at the moment though. You can build more structure to your account later if you decide to stick with Digital Ocean.
@@ -2331,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTE4NTA4NzcsLTExMjczMzAwNzMsLT
-MzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbMTYxNjY4NjQ4MywtMTEyNzMzMDA3MywtMz
+M1NDU0NzgzXX0=
 -->
