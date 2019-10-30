@@ -787,24 +787,24 @@ To add an existing repository to *RStudio*:
   <a name="install-shiny-server"/>
 
 ### Install Shiny Server
-  - install first the `shiny` and `rmarkdown` packages. This is actually not necessary for the correct functioning of the *Shiny Server*, but it's just to ensure that its landing page loads completely correct, showing the *shiny* app and the *rmarkdown* document on the right of the screen.
+ Before installing You need install first the `shiny` and `rmarkdown` packages. This is actually not necessary for the correct functioning of the *Shiny Server*, but it's just to ensure that its landing page loads completely correct, showing the *shiny* app and the *rmarkdown* document on the right of the screen.
     - enter the *R* software from the *Linux* terminal:
     ~~~
-      R
+    R
     ~~~
     - install the packages from the *R* console:
     ~~~
-      install.packages(c('rmarkdown', 'shiny'))
+    install.packages(c('rmarkdown', 'shiny'))
     ~~~
     - quit the *R* software:
     ~~~
-      q()
+    q()
     ~~~
     You can hit `n` when prompted to avoid saving this session.
   - move into the software repository we created in the previous RStudio installation step:
     `cd ~/software`
   - download the package (check [here](https://www.rstudio.com/products/shiny/download-server/) for latest version):
-    `wget -O shiny https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.9.923-amd64.deb`
+    `wget -O shiny https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.12.933-amd64.deb`
   - install *Shiny Server*:
     `sudo gdebi shiny`
   - add a rule to the firewall to allow the default port *Shiny Server* is listening to:
@@ -2367,9 +2367,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM1Mjk1MjQwLC0xMjk1MzE3MjYsLTE5Nz
-gwNDUxNTEsOTU4MzQzMzY2LDE2Mjc2NzEyNyw2NDk0MTA5ODgs
-LTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIsLTQ1Mj
-g5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAw
-NzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbMTY2Nzk4NjUsODM1Mjk1MjQwLC0xMjk1Mz
+E3MjYsLTE5NzgwNDUxNTEsOTU4MzQzMzY2LDE2Mjc2NzEyNyw2
+NDk0MTA5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzND
+g0OTIsLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMs
+LTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
