@@ -399,7 +399,7 @@ Login back again as the *new* user, and let's change the standard *ssh* port **2
     ~~~
   - **without logging out from the current session**, open another session besides the one already open, and test that the new user is capable to *ssh* into the machine using the new `xxxx` port, but not from the standard `22`. If anything does not sounds right, close this session and fix using the original session.
 
-Lastly, let's add to the system an antivirus and a firewall. Starting with the antivurus, we're going to use the [ClamAV]() due to it being open source and 
+Lastly, let's add to the system an antivirus and a firewall. Starting with the antivurus, we're going to use the [ClamAV](https://www.clamav.net/) package, being open source and particularly suited for Ubuntu Server installations.
   - install the software:
     ~~~
     sudo apt-get install clamav clamav-daemon 
@@ -2376,8 +2376,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjQyMTk5MTksMTYyNzY3MTI3LDY0OT
-QxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0ODQ5
-MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMT
-EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbMTg4NDcwMjUxLDE2Mjc2NzEyNyw2NDk0MT
+A5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIs
+LTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMj
+czMzAwNzMsLTMzNTQ1NDc4M119
 -->
