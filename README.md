@@ -253,7 +253,7 @@ It's customary instead to use a group called *sudo* that will act as a temporary
     exit
     ~~~
 
-From now on you should forget there exists a user called *root*, and always use instead *usrname* to run admin stat through the *sudo* commands.
+From now on you should forget there exists a user called *root*, and always use instead *usrname* to run admin stuff through the *sudo* commands.
 
 If you need to change a user's password, run the command:
 ~~~
@@ -2331,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjcyMDQ4NTEsMjExODUyMTk1MywtMT
+eyJoaXN0b3J5IjpbLTEyMDQ3MDIxNzUsMjExODUyMTk1MywtMT
 EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
