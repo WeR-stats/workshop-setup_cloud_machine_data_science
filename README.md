@@ -100,7 +100,7 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
   <a name="sign-up-do"/>
 
 ### Sign up to Digital Ocean
-  - go to https://m.do.co/c/ef1c7bc80083 (you'll be credited $100 lasting 60 days)
+  - go to https://m.do.co/c/ef1c7bc80083 (you'll be credited $50 lasting 30 days)
   - insert your email and a sufficiently strong password (you can generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new))
   - you'll be asked for a credit card, but no money will be taken from your account. Just remember to check in at the end of the grace period!
   - check your email and validate your new account
@@ -2331,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDkxMTAxNzIsLTExMjczMzAwNzMsLT
-MzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbMTQzOTc2MjM4MSwtMTEyNzMzMDA3MywtMz
+M1NDU0NzgzXX0=
 -->
