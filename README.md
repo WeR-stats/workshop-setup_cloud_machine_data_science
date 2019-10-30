@@ -274,9 +274,9 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
   <a name="add-public"/>
 
 ### Add *public* group and repository
-One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is related to file *permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: rad, write, execute, that can be by three subjects: the owner of the file, a particular group and all the *other* users. When you list the content of a directory you can see that each file has a list of nine binary numbers attached to it. these numbers must be read in group of three the first three are the operations allowed to the oner, the next are for the group, the last three for *others*.
+One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is related to *file permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: **r***ead*, **w***rite*, *e***x***ecute, that can be by three subjects: the owner of the file, a particular group and all the *other* users. When you list the content of a directory you can see that each file has a list of nine binary numbers attached to it. these numbers must be read in group of three the first three are the operations allowed to the oner, the next are for the group, the last three for *others*.
 
-HAving said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. When you're done, Tehn you copy in some wy 
+Having said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. When you're done, you then copy your code to the location where the Shiny Server reads its files. But you quickly discover that... you can't! as that directory is owned by the *shiny* user connected to the *Shiny* Server, and you can't access it. You could think that copying it using `sudo` would do the trick, and it will, but then *shiny* can't access those files because they are owned by root! Moreover, besides the code a data applciation usually needs data, often lots of different data, and they need to be stored somewhere when they can be read by *shiny* for the app to actually works. 
   
 There are a few different solutions, each with its own ups and downs. This solution will become practical also when using docker containers to deploy shiny applications..
 ~~~
@@ -2335,6 +2335,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMT
-g1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbLTIwOTY1MzMxMjIsLTQ1Mjg5ODA3MywxOT
+I1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1
+NDc4M119
 -->
