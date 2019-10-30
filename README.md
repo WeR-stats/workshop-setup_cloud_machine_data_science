@@ -185,7 +185,7 @@ If the IP address and the user name are correctly recognized, the system then pr
     ~~~
     curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
     ~~~
-    After a few minutes, you'll see a bunch of graphs and KPIs populating your droplets dashboard.
+    After a few minutes, you'll start to see a bunch of graphs and KPIs populating your droplets dashboard.
   - Enter the command  `date` to test if the timezone is correct. If it doesn't show the correct time and/or desired timezone, run the following commands: 
     ~~~
     dpkg --configure -a
@@ -2332,6 +2332,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjYxNjg5NjksMjExODUyMTk1MywtMT
-EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbMTMzNTQzNjYxNiwyMTE4NTIxOTUzLC0xMT
+I3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
 -->
