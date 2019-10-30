@@ -600,9 +600,10 @@ Once you own a domain, head to the [Digital Ocean](https://cloud.digitalocean.co
   - from the main menu on the left click `Manage` > `Networking`, then enter the tab `Domains`
   - in the textbox with the placeholder `Enter domain` write the domain name you've just *bought* 
   - from the listbox on the right choose the project that include the server you want to apply the domain to
-  - finally click `Add Domain`, and the domain should appear in the list below. Click on it!
-    - in the `HOSTNAME` textbox enter `@`, 
-    - in the `WILL DIRECT TO` textbox choose the server
+  - finally click `Add Domain`, and the domain should appear in the list below. 
+  - click on that new domain link, then:
+    - in the `HOSTNAME` textbox enter `@` 
+    - in the `WILL DIRECT TO` textbox choose the server to associate with that 
     - finally click `Create Record`
   - repeat the last two steps after entering `www`  in the `HOSTNAME` textbox 
 
@@ -2375,9 +2376,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQxODU4MDc0LC0xOTc4MDQ1MTUxLDk1OD
-M0MzM2NiwxNjI3NjcxMjcsNjQ5NDEwOTg4LC0xNTI4Njc5MTc5
-LDY5MzA5MDYyMywxMjEwMzQ4NDkyLC00NTI4OTgwNzMsMTkyNT
-E3MTgwOSwyMTE4NTIxOTUzLC0xMTI3MzMwMDczLC0zMzU0NTQ3
-ODNdfQ==
+eyJoaXN0b3J5IjpbLTE4MTU3ODQ1NjEsLTE5NzgwNDUxNTEsOT
+U4MzQzMzY2LDE2Mjc2NzEyNyw2NDk0MTA5ODgsLTE1Mjg2Nzkx
+NzksNjkzMDkwNjIzLDEyMTAzNDg0OTIsLTQ1Mjg5ODA3MywxOT
+I1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1
+NDc4M119
 -->
