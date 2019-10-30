@@ -598,7 +598,7 @@ Anyway, once you're on the *Freenom* landing page:
 
 Once you own a domain, head to the [Digital Ocean](https://cloud.digitalocean.com/) website, then:. 
   - from the main menu on the left click `Manage` > `Networking`, then enter the tab `Domains`. 
-  - in the textbox with the placeholder `Enter domain` write the domain name you've just *bought**Enter domain* under `Add a domain` write your hostname, 
+  - in the textbox with the placeholder `Enter domain` write the domain name you've just *bought* *Enter domain* under `Add a domain` write your hostname, 
   - from the listbox on the right choose the project that include the server you want to apply the domain to
   - finally click `Add Domain`, and the domain should appear in a newthe list below. Click on it!
     - in the `HOSTNAME` textbox enter `@`, 
@@ -2375,8 +2375,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzgwNDUxNTEsOTU4MzQzMzY2LDE2Mj
-c2NzEyNyw2NDk0MTA5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIz
-LDEyMTAzNDg0OTIsLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMT
-g1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbLTYwOTM3MjcxNywtMTk3ODA0NTE1MSw5NT
+gzNDMzNjYsMTYyNzY3MTI3LDY0OTQxMDk4OCwtMTUyODY3OTE3
+OSw2OTMwOTA2MjMsMTIxMDM0ODQ5MiwtNDUyODk4MDczLDE5Mj
+UxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3MywtMzM1NDU0
+NzgzXX0=
 -->
