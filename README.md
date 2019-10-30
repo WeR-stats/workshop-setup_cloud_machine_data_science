@@ -589,7 +589,7 @@ It's a safer choice to add [Two-Factor Authentication](https://en.wikipedia.org/
 How boring and annoying is to always remember an IP address? Enter [domain names](https://en.wikipedia.org/wiki/Domain_name)! For the current purpose, there's no point though in spending any money to own a fancy domain. Head instead to [Freenom World](http://www.freenom.org) to grab a free one! The catch here is that the choice of [Top-Level Domain](https://en.wikipedia.org/wiki/Top-level_domain) is restricted in the set: *tk*, *ga*, *ml*, *cf* and *gq*. 
 
 Anyway, once you're on the *Freenom* landing page:
-  -, look for a domain name you like, and make sure it is actually free of charge, as some combinations with the five above TLDs are subscription based.
+  - look for a domain name you like, and make sure it is actually free of charge, as some combinations with the five above TLDs are subscription based.
   - click `Get it Now`, and then move to the checkout page.
   - Once there, click first `Use DNS`, then the tab `Use your own DNS`, and in the two textboxes labelled with `Nameserver` insert respectively:
     - `ns1.digitalocean.com`
@@ -2375,8 +2375,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NTMxMDgwNSw5NTgzNDMzNjYsMTYyNz
-Y3MTI3LDY0OTQxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMs
-MTIxMDM0ODQ5MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExOD
-UyMTk1MywtMTEyNzMzMDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbLTE5NzgwNDUxNTEsOTU4MzQzMzY2LDE2Mj
+c2NzEyNyw2NDk0MTA5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIz
+LDEyMTAzNDg0OTIsLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMT
+g1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
