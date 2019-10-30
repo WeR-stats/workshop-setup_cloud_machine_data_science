@@ -100,7 +100,7 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
   <a name="sign-up-do"/>
 
 ### Sign up to Digital Ocean
-  - go to https://m.do.co/c/ef1c7bc80083 (you'll be credited $50 lasting 30 days)
+  - go to https://m.do.co/c/ef1c7bc80083 (you'll be credited $50 lasting 30 days, offer valid as of today)
   - insert your email and a sufficiently strong password (you can generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new))
   - you'll be asked for a credit card, but no money will be taken from your account. Just remember to check in at the end of the grace period!
   - check your email and validate your new account
@@ -122,8 +122,8 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
   <a name="droplet-without-ssh-key"/>
 
 ### Create Your First *droplet*
-  - Click the green "Create" button in the top right
-  - Click "Droplet" from the unfolding menu
+  - Click the green *Create* button in the top right
+  - Click *Droplets* from the unfolding menu
   - For the installation step, you should create a VPS which is at least 2GB RAM, because a few packages require more than 1GB RAM to compile. You can always change up or down either number of CPUs or amount of RAM later.
      For the moment being, choose the following (moving top to bottom):
     - Image / Distributions: `Ubuntu 18.04.x x64`
@@ -2331,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzOTc2MjM4MSwtMTEyNzMzMDA3MywtMz
-M1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbLTEwNTY3MDAzNTQsLTExMjczMzAwNzMsLT
+MzNTQ1NDc4M119
 -->
