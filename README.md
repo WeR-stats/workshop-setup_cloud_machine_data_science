@@ -282,19 +282,19 @@ Having said that, why things become problematic? Well, because you usually deplo
   
 There are a few different solutions, each with its own ups and downs. The solution proposed here will become practical also when using docker containers to deploy shiny applications. We define a public group, containing the *shiny* user plus each user interested in the development of shiny applications, and a subfolder somewhere in the filesystem to use as a public repository for the group itself. 
 
-Let's start creating the group and adding to it the user we've just 
+Let's start creating the *public* group, and adding to it the user we've just created. Any other user user can be added in hte same way:
 ~~~
 sudo groupadd public
 sudo usermod -aG public usrname
 ~~~
 
-I decided to go for `/usr/local/share/public`, but feel free to change the location as you wish.
+We can now create the public repository. I decided to go for `/usr/local/share/public`, but feel free to change the location as you wish.
 ~~~
 sudo mkdir /usr/local/share/public/
 sudo chgrp -R public /usr/local/share/public/
 sudo chmod -R 2775 /usr/local/share/public/
 ~~~
-To add the above path to a system variable, run the following command:
+To add the above path to a system variable, so that you can inse run the following command:
 ~~~
 export PUB_PATH="/usr/local/share/public"
 ~~~
@@ -2339,7 +2339,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTEwNjEzNTUsMTIxMDM0ODQ5MiwtND
-UyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMTEyNzMz
-MDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbMTk2Mjk0MTksMTIxMDM0ODQ5MiwtNDUyOD
+k4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3
+MywtMzM1NDU0NzgzXX0=
 -->
