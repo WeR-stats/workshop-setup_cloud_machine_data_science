@@ -1,7 +1,7 @@
 # How to Setup a Cloud Server for Data Science
 
 **Author**: [Luca Valnegri](https://www.linkedin.com/in/lucavalnegri/)   
-**Last Updated**: 22-Oct-2019
+**Last Updated**: 30-Oct-2019
 
 <a name="index"/>
 
@@ -81,8 +81,8 @@
 ## Motivations 
 If you’ve always wanted to have:
   - an *RStudio Server* of your own so that you can access your *R* projects from anywhere (albeit with an internet connection)
-  - your own *Shiny Server* to host your awesome data visualizations, the results of statistical modeling, monitor your machine learning algorithms, or simply deploy some *Rmarkdown* documents
-  - a *jupyterlab* server to share your knowledge with your team colleagues
+  - your own *Shiny Server* to host your awesome data visualizations, the results of statistical modeling, monitor your machine learning algorithms, or simply deploy some *RMarkdown* documents
+  - a *JupyterLab* server to share your knowledge with your team colleagues
   - one or more database server to store any kind of data, small or/and big, relational and/or schema-less
   - your own cloud storage to acces your file from everyhere without paying another company to do so
 
@@ -100,8 +100,8 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
   <a name="sign-up-do"/>
 
 ### Sign up to Digital Ocean
-  - go to https://m.do.co/c/ef1c7bc80083 (you'll be credited $100 lasting 60 days)
-  - insert your email and a sufficiently strong password (you can generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new))
+  - go to https://m.do.co/c/ef1c7bc80083 (you'll be credited $50 lasting 30 days, offer valid as of today)
+  - insert your email and a sufficiently strong password (you can generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new)).
   - you'll be asked for a credit card, but no money will be taken from your account. Just remember to check in at the end of the grace period!
   - check your email and validate your new account
 
@@ -122,17 +122,18 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
   <a name="droplet-without-ssh-key"/>
 
 ### Create Your First *droplet*
-  - Click the green "Create" button in the top right
-  - Click "Droplet" from the unfolding menu
-  - For the installation step, you should create a VPS which is at least 2GB RAM, because a few packages require more than 1GB RAM to compile. You can always change up or down either number of CPUs or amount of RAM later.
+  - Click the green *Create* button in the top right
+  - Click *Droplets* from the unfolding menu
+  - For the installation step, you should create a VPS which is at least 2GB RAM, because a few packages require more than 1GB RAM to compile. You can always change up or down to some amount either number of CPUs or amount of RAM later.
      For the moment being, choose the following (moving top to bottom):
     - Image / Distributions: `Ubuntu 18.04.x x64`
-    - Plan / Starter (Standard): C 4TB, RAM 2GB, Power CP, Storage 50GB, Transfer 4TB
+    - Plan / Starter (Standard): `RAM 2GB`, `Power 1CPU`, `Storage 50GB`, `Transfer 2TB`, `cost $10 monthly`
 	- Datacenter Region: `London`
+	- Authentication: `One-time password` (we'll move to `SSH key` later)
 	- Hostname: choose a memorable name ou can always change it later from inside the machine
 	- Tags: choose the reference project. I guess you only have the default one at the moment though. You can build more structure to your account later if you decide to stick with Digital Ocean.
   - Click `Create`
-  - Wait for the email containing the IP public address of the server, and the password for the *root* user. The IP address could also be found in the *Resources* tab besides the name of the droplet. 
+  - Wait for the email containing the IP public address of the server, and the password for the *root* (admin) user. The IP address could also be found in the *Resources* tab besides the name of the droplet. 
 
 Notice that Digital Ocean highly discourage the creation of *swap space*, practice often used to keep down the size, and hence the cost, of the droplet. This is due to the fact that their system is all made up of SSD storage, that is highly degraded by the continous read/write access, typical when swapping. Besides, upgrading the droplet leads to much better results in general.
 
@@ -150,7 +151,7 @@ The first time you connect to a droplet as *root*, the system asks you to change
   <a name="without-key-windows"/>
 
 #### Windows users
-Windows has no embedded ssh client by default. Many software can be downloaded for free, one of the most famous is [PuTTY](https://www.putty.org/), but we are going to use the much enhanced [MobaXTerm](https://mobaxterm.mobatek.net/), which is free for personal use and allows, among other functionalities, multi-tabbing and saving sessions.
+Windows has no embedded ssh client by default. Many software can be downloaded for free, one of the most famous is [PuTTY](https://www.putty.org/), but we are going to use the much enhanced [MobaXTerm](https://mobaxterm.mobatek.net/), which is free for personal use and allows, among other functionalities, *sftp*, tunnelling, multi-tabbing and saving sessions.
   - [Download](https://mobaxterm.mobatek.net/download-home-edition.html) the *Home* edition of *MobaXTerm*. You can use, if you so prefer, the *portable* edition that doesn't need any installation. Just unzip the downloaded file in some folder of your choice, then run the included executable.
   - Open *MobaXTerm*
   - For a more standard copy and paste behaviour, click `Settings` towards the far right of the button bar, then click the tab `Terminal`. Uncheck the option *Paste using right-click*, then click `OK`. Now you can paste content in any terminal window using the standard `SHIFT+INS` keys combination (but you can't *copy* and *paste* using the more frequent `CTRL+C` and `CTRL+V`). In addition, a right-click button of the mouse exposes a quite extensive actions menu.
@@ -182,20 +183,19 @@ If the IP address and the user name are correctly recognized, the system then pr
 ### Upgrade the System
   - To enable monitoring from the DO dashboard enter the following command (or simply copy and paste, it doesn't hurt):
     ~~~
-    curl -sSL https://insights.nyc3.cdn.digitaloceanspaces.com/install.sh | sudo bash
+    curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
     ~~~
-    After a few minutes, you'll see a bunch of graphs and KPIs populating your droplets dashboard.
+    After a few minutes, you'll start to see a bunch of graphs and KPIs populating your droplets dashboard.
   - Enter the command  `date` to test if the timezone is correct. If it doesn't show the correct time and/or desired timezone, run the following commands: 
     ~~~
     dpkg --configure -a
 	dpkg-reconfigure tzdata
     ~~~
-	then enter the correct zone for your location. Notice that if you leave the timezone as **UTC**, there will be no automatic passage between winter and summer time. 
+	then enter the correct zone for your location. Notice that if you leave the timezone as **UTC**, there will be no automatic passage between winter and summer time (the timezones for the UK are **GMT** from November to March, and **BST** from April to October). 
   - Before proceeding any further, let's thouroughly upgrade the system:
     ~~~
 	apt-get update
-	apt-get -y upgrade
-	apt-get -y dist-upgrade
+	apt-get -y full-upgrade
 	apt-get -y autoremove
     ~~~
     answering `y` everytime you're asked permission.
@@ -235,7 +235,7 @@ It's customary instead to use a group called *sudo* that will act as a temporary
     ~~~
     adduser usrname
     ~~~
-  - enter a password twice (generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new)), and then the required information (you can simply void all the fields)
+  - enter a password twice (try not to include any special character, as they can cause some problem down the line), and then the required information (you can simply void all the fields)
   - add new user as *sudoer* to the *sudo* group:
     ~~~
     usermod -aG sudo usrname
@@ -253,7 +253,7 @@ It's customary instead to use a group called *sudo* that will act as a temporary
     exit
     ~~~
 
-From now on you should forget there exists a user called *root*, and always use instead *usrname* to run admin stat through the *sudo* commands.
+From now on you should forget there exists a user called *root*, and always use instead *usrname* to run admin stuff through the `sudo` commands.
 
 If you need to change a user's password, run the command:
 ~~~
@@ -274,7 +274,11 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
   <a name="add-public"/>
 
 ### Add *public* group and repository
+One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is related to *file permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: **r**ead, **w**rite, e**x**ecute, that can be carried out by three (groups of) users: the *owner* of the file, any user belonging to a specific *group*, and all the *other* users. When you list the content of a directory, using for example the `ls -l` command, you can see all the permissions in a form of nine binary numbers attached to it, where 0 means *not permitted* and 1 means *permitted*. These numbers must be read in group of three: the first three are the operations allowed to the *owner*, the next three are for the *group*, the last three for *others*. 
 
+Having said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. When you're done, you then copy your code to the location where the Shiny Server reads its files. But you quickly discover that... you can't! as that directory is owned by the *shiny* user connected to the *Shiny* Server, and you can't access it. You could think that copying it using `sudo` would do the trick, and it will, but then *shiny* can't access those files because they are owned by root! Moreover, besides the code a data applciation usually needs data, often lots of different data, and they need to be stored somewhere when they can be read by *shiny* for the app to actually works. 
+  
+There are a few different solutions, each with its own ups and downs. This solution will become practical also when using docker containers to deploy shiny applications..
 ~~~
 sudo groupadd public
 sudo usermod -aG public usrname
@@ -632,7 +636,7 @@ then add at the bottom the following line:
 deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/
 ~~~
  
-To add to the *R* environment the path of the *public* repository we defined earlier:
+To add to the *R* environment the path of the *public* repository we defined earlier to the *R* environment:
   - open the general *R* configuration file for editing:
     ~~~
     sudo nano $(R RHOME)/etc/Renviron
@@ -869,9 +873,13 @@ You can now open a browser and head to [http://ip_address/uk_petitions]() to see
     ~~~
   - **rgdal**:
     ~~~
-    sudo add-apt-repository ppa:ubuntugis/ppa
+    sudo add-apt-repository ppa:ubuntugis/ppaubuntugis-unstable
 	sudo apt-get update 
 	sudo apt-get install -y gdal-bin libgdal-dev
+    ~~~
+    But check [here](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa)  for the availability of the *stable*  release of the *UbuntuGIS* suite of spatial packages  for Ubuntu *Bionic* **18.04**, then replacsubstitute the first line in the above group with the following:
+    ~~~
+    sudo add-apt-repository ppa:ubuntugis/ppa
     ~~~
   - **rgeos**  (must be installed after previous dependencies):
     ~~~
@@ -1051,7 +1059,7 @@ We're going to install [PHP-FPM](https://php-fpm.org/), a FastCGI implementation
     ~~~
   - check the web server is running:
     ~~~
-    sudo systemctl status nginx
+    sudo systemctl statusreload nginx
     ~~~
   - to test if the *php* interpreter  is actually working, create a new file in the webroot directory:
     ~~~
@@ -1164,10 +1172,10 @@ As we've seen before, from the server's point of view a shiny app is nothing mor
     ~~~
     location /shiny/appname/ {
       auth_basic "Username and Password are required"; 
-      auth_basic_user_file /usr/local/share/public/shiny_server/pwds/appname.pwds;
+      auth_basic_user_file /usr/local/share/public/shiny_server/pwds/appname._pwds;
     }
     ~~~
-    Notice that you should have one and only of the above for each `appname`, although the reference file `appname.pwds` could be the same for more than one app
+    Notice that you should have one and only of the above for each `appname`, although the reference file `appname._pwds` could be the same for more than one app
   - check the configuration is correct:
     ~~~
     sudo nginx -t
@@ -1293,7 +1301,7 @@ Some of the above packages requires the following libraries to be installed befo
     ~~~
   - pytorch:
     ~~~
-    pip3 install --user https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl
+    pip3 install --user https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl  
     ~~~
     If any error shows up, you should first ensure your version of Python is 3.7.x, as indicated in the above filename. If your version of Python is different, try first to adjust the filename according to the version number. 
   - if using *Theano* or *Keras* it's better to also install the *OpenBLAS* libraries to improve performance:
@@ -1353,6 +1361,7 @@ Once installed using the previous process, execute the following commands:
     IRkernel::installspec()
     ~~~
 
+
 Notice that the above process refers to a single user setup. For multi-users servers, look at [JupyterHub](https://github.com/jupyterhub/jupyterhub), which is outside of the scope of the current tutorial.
 
 
@@ -1396,7 +1405,7 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
     sudo mysql_secure_installation
     ~~~
     skip the first question, then insert a strong new password for *root*, and finally answer **Yes** to all the remaining questions.
-  - login as root (when asked, enter the password you choose in the previous step):
+  - login as root, (when asked, enter the password you choose in the previous step)step before:
     ~~~
     sudo mysql -u root -p
     ~~~
@@ -1407,7 +1416,7 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
       GRANT ALL PRIVILEGES ON *.* TO 'devs'@'localhost';
       FLUSH PRIVILEGES;
       ~~~
-    - apps and/or remote, with a read-only privilege:
+    - apps and/or remote, with a read-only privilege, possibly working from remote if you decide to build separate machines for *data storage* and *production*:
       ~~~
       CREATE USER 'shiny'@'localhost' IDENTIFIED BY 'pwd';
       GRANT SELECT ON *.* TO 'shiny'@'localhost';
@@ -1415,9 +1424,10 @@ By default, a notebook server runs locally at `127.0.0.1:8888`, and is accessibl
       GRANT SELECT ON *.* TO 'shiny'@'%';
       FLUSH PRIVILEGES;
       ~~~
-      Notice that it is really necessary for the *shiny* user to have both the *localhost* and the *%* statements to be able to connect from *anywhere*. Moreover, if it is known beforehand the exact IP address of the machine where the user is going to query from, then that IP should be included in the above statements, instead of the percent sign.
+      Notice that it is really necessary for the *shiny* user to have both the *localhost* and the *%* statements to be able to connect from *anywhere* as *shiny*. Moreover, if it is known beforehand the exact IP address of the machineip where the shiny user is going to query from, then that IPip should be included in the above statements, instead of the percent sign.
       
-    In a similar way, it is possible to create additional *personal* users. See [here](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html) for a list of all possible specifications for the privileges.    
+    In a similar way, it is possible to create additional *personal* users. See [here](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html) for a list of all possible specifications for the privileges.
+    
   -  `exit` MySQL server
 
 If you've created, as above, a user with potential remote access, you also have to:
@@ -1427,25 +1437,25 @@ If you've created, as above, a user with potential remote access, you also have 
     ~~~
   - change a setting in the server configuration, that by default close down any networking possibility:
     - open the *server* configuration file for editing:
-      ~~~
-      sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
-      ~~~
+    ~~~
+    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    ~~~
     - find the following line:
-      ~~~
-      bind-address 127.0.0.1
-      ~~~
+    ~~~
+    bind-address 127.0.0.1
+    ~~~
       and change it to:
-      ~~~
-      bind-address 0.0.0.0
-      ~~~
+    ~~~
+    bind-address 0.0.0.0
+    ~~~
 
 We're now in a position to add credentials in a way that avoid people to see password in clear in scripts: 
-  - open the *users* configuration file for editing:
+  - open the *users*MySQL configuration file for editing:
     ~~~
-    sudo nano /etc/mysql/my.cnf
+    `sudo nano /etc/mysql/my.cnf
     ~~~
   - scroll at the end and add the desired credential(s):
-    ~~~
+    ~~~```
     [groupname]
     host = ip_address
     user = usrname
@@ -1495,7 +1505,7 @@ We're now in a position to add credentials in a way that avoid people to see pas
   <a name="dbninja"/>
 
 #### Install DbNinja, a web client to MySQL Server
-This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* processor already installed on the system. We already have installed *nginx*, so we only need to install *php*.
+This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* processor already installed on the system. We already have installed *nginx*, so we only need, so we have to install *php*.
   - download the client software:
     ~~~
     cd ~/software
@@ -1515,7 +1525,7 @@ This step requires to have a Web server, like *Apache* or *Nginx*, and a *php* p
     sudo ls /var/www/html/sql/_users/
     ~~~
   - insert a strong password
-  - login as *admin* using the previous password (this is neither the *MySQL* nor the *Ubuntu* credentials) 
+  - login as *admin* using the previous password (this is not either the *MySQL* nor the *Ubuntu* credentials) 
   - open the top left menu *DbNinja*, then *Settings*, then the *Settings* tab, and check `Hide the ...`. Click *Save*.
   - to add any *MySQL* Server, open the top left menu *DbNinja*, and under *MySQL Hosts* tab click *Add Host* , complete with the desired *MySQL* username (don't save the password for better security), and finally click *Save*
 
@@ -1598,7 +1608,8 @@ After the Server installation, we also need to install some additional tool to c
     (1 rows affected)
     (1 rows affected)
     (1 rows affected)
-    
+    ~~~
+    ~~~
     1> SELECT * FROM test
     2> go
     id          name                                               quantity
@@ -1607,7 +1618,8 @@ After the Server installation, we also need to install some additional tool to c
               2 two                                                        200
               3 three                                                     3000
     (3 rows affected)
-    
+    ~~~
+    ~~~
     1> DROP TABLE test
     2> go
     
@@ -2322,3 +2334,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 
 ---
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTIxMDM0ODQ5MiwtNDUyODk4MDczLDE5Mj
+UxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3MywtMzM1NDU0
+NzgzXX0=
+-->

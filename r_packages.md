@@ -1,7 +1,7 @@
 # Notable *R* Packages for Data Science
 
 **Author**: [Luca Valnegri](https://www.linkedin.com/in/lucavalnegri/)   
-**Last Updated**: 06-Jan-2019
+**Last Updated**: 30-Oct-2019
 
 ---
   * [Data Sourcing](#sourcing)
@@ -228,7 +228,7 @@
   - [vcd](https://cran.r-project.org/package=vcd/) - Visualization tools and tests for categorical data
   - [vcdExtra](https://cran.r-project.org/package=vcdExtra/) - Complement to the *vcd*  and the *gnm* packages
   - [gridExtra](http://github.com/baptiste/gridextra/wiki) - Provides a number of user-level functions to work with *grid* graphics
-  - [animint](http://github.com/tdhock/animint) `install_github('tdhock/animint')` - Provide tools to design multi-layer, multi-plot, interactive, and possibly animated data visualizations using *ggplot2*, and rendering with [D3](http://d3js.org/)
+  - [animint2](http://github.com/tdhock/animint2) - Provide tools to design multi-layer, multi-plot, interactive, and possibly animated data visualizations using *ggplot2*, and rendering with [D3](http://d3js.org/)
   - [sjplot](https://github.com/strengejacke/sjPlot) - Collection of plotting and table output functions for data visualization, with a focus on Statistics in Social Science 
   - [trelliscope](https://github.com/delta-rho/trelliscope) - Provides a scalable way to flexibly visualize large, complex data in great detai
   - [tabplot](https://github.com/mtennekes/tabplot) - Provides visualization methods to explore and analyse large multivariate datasets.
@@ -315,7 +315,6 @@
   - [ggmosaic](https://github.com/haleyjeppson/ggmosaic) - Add mosaic functionality to ggplots
   - [ggnetwork](http://github.com/briatte/ggnetwork) - Add geometry to plot networks
   - [ggnet](http://github.com/briatte/ggnet) `install_github('briatte/ggnet')` - 
-  - [ggplus](http://github.com/guiastrennec/ggplus) `install_github('guiastrennec/ggplus')` - A set of additional functions for ggplot2
   - [ggpol](https://github.com/erocoar/ggpol) -  adds parliament diagrams and various other visualizations and convenience functions to ggplot2
   - [ggpmisc](https://bitbucket.org/aphalo/ggpmisc) - Miscellaneous Extensions to *ggplot2*
   - [ggpubr](https://github.com/kassambara/ggpubr) - Provides some easy-to-use functions for creating and customizing ‘ggplot2’- based publication ready plots.
@@ -378,6 +377,7 @@
   - [qualpalr](https://github.com/jolars/qualpalr) - Another package able to generate *distinct qualitative* color palettes inspired by [IWantHue](http://tools.medialab.sciences-po.fr/iwanthue/)
   - [randomcoloR](https://github.com/ronammar/randomcoloR) - Simple methods to generate *attractive* random colors, as a wrapper of the JS library [randomColor.js](https://github.com/davidmerfield/randomColor), or *optimally distinct* colors based on k-means, inspired by [IWantHue](http://tools.medialab.sciences-po.fr/iwanthue/)
   - [Cairo](https://cran.r-project.org/package=Cairo/) - R graphics device using the [cairo graphics library](https://www.cairographics.org/) for creating high-quality graphics output
+  - [paletteer](https://github.com/EmilHvitfeldt/paletteer) - An attempt to collect most of the color palettes $R$ packages, using a common interface.
 
   <a name="icons"/>
 
@@ -836,5 +836,6 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxMTUwMDUxXX0=
+eyJoaXN0b3J5IjpbLTcyNzI4OTIyMywtMTI5MjI0NzQ2MywtMj
+EwMzM2MDQzMSw4MTkzODU2NzcsOTYxMTUwMDUxXX0=
 -->
