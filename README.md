@@ -787,7 +787,7 @@ To add an existing repository to *RStudio*:
   <a name="install-shiny-server"/>
 
 ### Install Shiny Server
- Before installing You need install first the `shiny` and `rmarkdown` packages. This is actually not necessary for the correct functioning of the *Shiny Server*, but it's just to ensure that its landing page loads completely correct, showing the *shiny* app and the *rmarkdown* document on the right of the screen.
+Before installing the *Shiny* Server,  it is usually suggested you first install the `shiny` and `rmarkdown` packages in the *R* system. This is actually not necessary for the correct functioning of the *Shiny Server*, but it's just to ensure that its landing page loads completely correct, showing the *shiny* app and the *rmarkdown* document on the right of the screen.
     - enter the *R* software from the *Linux* terminal:
     ~~~
     R
@@ -2367,9 +2367,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2Nzk4NjUsODM1Mjk1MjQwLC0xMjk1Mz
-E3MjYsLTE5NzgwNDUxNTEsOTU4MzQzMzY2LDE2Mjc2NzEyNyw2
-NDk0MTA5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzND
-g0OTIsLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMs
-LTExMjczMzAwNzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbLTQzODE5MDU3Miw4MzUyOTUyNDAsLTEyOT
+UzMTcyNiwtMTk3ODA0NTE1MSw5NTgzNDMzNjYsMTYyNzY3MTI3
+LDY0OTQxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMD
+M0ODQ5MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1
+MywtMTEyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
