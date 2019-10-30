@@ -436,7 +436,7 @@ Lastly, let's add to the system an antivirus and a firewall. Starting with the a
       nice -n 15 clamscan && clamscan -ir /
       ~~~
 
-Let's finally proceed with the firewall. We're using the *ufw* package that's included by default in the Ubuntu:
+Let's finally proceed with the firewall. We're using the *ufw* package that's included by default in the Ubuntu installation:
   - enable the software:
     ~~~
     sudo ufw enable
@@ -2376,7 +2376,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTMwNTU5MDcsMTYyNzY3MTI3LDY0OT
+eyJoaXN0b3J5IjpbLTEyMjQyMTk5MTksMTYyNzY3MTI3LDY0OT
 QxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0ODQ5
 MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMT
 EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
