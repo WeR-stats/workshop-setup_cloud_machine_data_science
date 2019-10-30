@@ -282,7 +282,7 @@ Having said that, why things become problematic? Well, because you usually deplo
   
 There are a few different solutions, each with its own ups and downs. The solution proposed here will become more practical when using docker containers to deploy shiny applications. We simply define a public group, containing the *shiny* user plus each user interested in the development of shiny applications, and a subfolder somewhere in the filesystem to use as a public repository for the group itself. This repository will also contain a subfolder dedicated to to the *R* packages.
 
-Let's start creating the *public* group, and adding to it the user *usrname* we've just created (any other user user can be added in the same way):
+Let's start creating the *public* group, and adding to it the user *usrname* we've just created (any other user user can be added afterwards in the same way):
 ~~~
 sudo groupadd public
 sudo usermod -aG public usrname
@@ -2339,7 +2339,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNTc1MzUxMiwxMjEwMzQ4NDkyLC00NT
-I4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMTI3MzMw
-MDczLC0zMzU0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbNjkzMDkwNjIzLDEyMTAzNDg0OTIsLTQ1Mj
+g5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAw
+NzMsLTMzNTQ1NDc4M119
 -->
