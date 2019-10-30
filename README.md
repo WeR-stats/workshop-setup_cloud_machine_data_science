@@ -124,9 +124,9 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
 ### Create Your First *droplet*
   - Click the green *Create* button in the top right
   - Click *Droplets* from the unfolding menu
-  - For the installation step, you should create a VPS which is at least 2GB RAM, because a few packages require more than 1GB RAM to compile. You can always change up or down either number of CPUs or amount of RAM later.
+  - For the installation step, you should create a VPS which is at least 2GB RAM, because a few packages require more than 1GB RAM to compile. You can always change up or down to some amount either number of CPUs or amount of RAM later.
      For the moment being, choose the following (moving top to bottom):
-    - Image / Distributions: `Ubuntu 18.04.x x64`
+    - Image / Distributions: `Ubuntu 18.04.x x64` (as 
     - Plan / Starter (Standard): C 4TB, RAM 2GB, Power CP, Storage 50GB, Transfer 4TB
 	- Datacenter Region: `London`
 	- Hostname: choose a memorable name ou can always change it later from inside the machine
@@ -2331,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTY3MDAzNTQsLTExMjczMzAwNzMsLT
+eyJoaXN0b3J5IjpbLTIwMTE4NTA4NzcsLTExMjczMzAwNzMsLT
 MzNTQ1NDc4M119
 -->
