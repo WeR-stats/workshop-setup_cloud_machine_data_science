@@ -274,7 +274,7 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
   <a name="add-public"/>
 
 ### Add *public* group and repository
-One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is related to *file permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: **r**ead, **w**rite, e**x**ecute, that can be carried out by three (groups of) users: the *owner* of the file, any user belonging to a specific *group*, and all the *other* users. When you list the content of a directory, using for example the `ls -l` command, you can see all the permissions in a form of nine binary numbers attached to it, where 0 means *not permitted* and 1 means *permitted*. These numbers must be read in group of three: the first three are the operations allowed to the *owner*, the next three are for the *group*, the last three for *others*. 
+One of the main problems beginners encounter when they start using Linux, and the *Shiny* Server in particular,  is related to the much dreaded *file permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: **r**ead, **w**rite, e**x**ecute, that can be carried out by three (groups of) users: the *owner* of the file, any user belonging to a specific *group*, and all the *other* users. When you list the content of a directory, using for example the `ls -l` command, you can see all the permissions in a form of nine binary numbers attached to it, where 0 means *not permitted* and 1 means *permitted*. These numbers must be read in group of three: the first three are the operations allowed to the *owner*, the next three are for the *group*, the last three for *others*. 
 
 ![linux file permissions](https://github.com/WeR-stats/workshop-setup_cloud_machine_data_science/blob/master/permissions.png?raw=true)
 
@@ -2337,7 +2337,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MDUxNzM4MSwxMjEwMzQ4NDkyLC00NT
+eyJoaXN0b3J5IjpbMTgwNDM5MDQyMCwxMjEwMzQ4NDkyLC00NT
 I4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMTI3MzMw
 MDczLC0zMzU0NTQ3ODNdfQ==
 -->
