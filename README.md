@@ -183,7 +183,7 @@ If the IP address and the user name are correctly recognized, the system then pr
 ### Upgrade the System
   - To enable monitoring from the DO dashboard enter the following command (or simply copy and paste, it doesn't hurt):
     ~~~
-    curl -sSL https://insights.nyc3.cdn.digitaloceanspaces.com/install.sh | sudo bash
+    curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
     ~~~
     After a few minutes, you'll see a bunch of graphs and KPIs populating your droplets dashboard.
   - Enter the command  `date` to test if the timezone is correct. If it doesn't show the correct time and/or desired timezone, run the following commands: 
@@ -2332,6 +2332,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExODUyMTk1MywtMTEyNzMzMDA3MywtMz
-M1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbLTExMjYxNjg5NjksMjExODUyMTk1MywtMT
+EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
