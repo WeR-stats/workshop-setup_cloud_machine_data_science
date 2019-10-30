@@ -821,7 +821,7 @@ Before installing the *Shiny* Server,  it is usually suggested you first install
   - head for [http://ip_address:3838/]() to check the software is up and running.
   - change the default port `3838` to some random integer number `xxxx`:
     - open the *Shiny Server* configuration file for editing:
-    sudo nano /etc/shiny-server/shiny-server.conf`
+    `sudo nano /etc/shiny-server/shiny-server.conf`
     - change the port from `3838` to `xxxx`:
       `listen xxxx`
     - restart the server:
@@ -2376,7 +2376,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjE2NjU1Miw4MzUyOTUyNDAsLTEyOT
+eyJoaXN0b3J5IjpbLTc4NDk0NjQwMiw4MzUyOTUyNDAsLTEyOT
 UzMTcyNiwtMTk3ODA0NTE1MSw5NTgzNDMzNjYsMTYyNzY3MTI3
 LDY0OTQxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMD
 M0ODQ5MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1
