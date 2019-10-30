@@ -399,8 +399,8 @@ Login back again as the *new* user, and let's change the standard *ssh* port **2
     ~~~
   - **without logging out from the current session**, open another session besides the one already open, and test that the new user is capable to *ssh* into the machine using the new `xxxx` port, but not from the standard `22`. If anything does not sounds right, close this session and fix using the original session.
 
-Lastly, let's add an antivirus and enable a firewall:
-  - enable the default firewall software:
+Lastly, letsenable the standard firewall *ufw* allowing at once the new above port (THIS IS IMPORTANT!!!)
+  - enable the firewall software:
     ~~~
     sudo ufw enable
     ~~~
@@ -2339,8 +2339,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzY3MTI3LDY0OTQxMDk4OCwtMTUyOD
-Y3OTE3OSw2OTMwOTA2MjMsMTIxMDM0ODQ5MiwtNDUyODk4MDcz
-LDE5MjUxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3MywtMz
-M1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbLTEwOTMwNzE3NTYsMTYyNzY3MTI3LDY0OT
+QxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0ODQ5
+MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMT
+EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
