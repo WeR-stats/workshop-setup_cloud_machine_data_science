@@ -883,7 +883,7 @@ To copy the app code into the above folder, we first need to create a new projec
 
 Once the repo has been pulled on the server, run the following simple command to actually copy the code:
 ~~~
-cp ~/shinyapps/uk_petitions/* /srv/shiny-server/uk_petitions/
+cp ~/path/to/repo/app/* /srv/shiny-server/uk_petitions/
 ~~~
 
 You can now open a browser and head to [http://ip_address/uk_petitions]() to see the app up and running!
@@ -2372,9 +2372,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyMTM0MzE5LDgzNTI5NTI0MCwtMTI5NT
-MxNzI2LC0xOTc4MDQ1MTUxLDk1ODM0MzM2NiwxNjI3NjcxMjcs
-NjQ5NDEwOTg4LC0xNTI4Njc5MTc5LDY5MzA5MDYyMywxMjEwMz
-Q4NDkyLC00NTI4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUz
-LC0xMTI3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbMTQ3MTk2MzgyNyw5NTIxMzQzMTksODM1Mj
+k1MjQwLC0xMjk1MzE3MjYsLTE5NzgwNDUxNTEsOTU4MzQzMzY2
+LDE2Mjc2NzEyNyw2NDk0MTA5ODgsLTE1Mjg2NzkxNzksNjkzMD
+kwNjIzLDEyMTAzNDg0OTIsLTQ1Mjg5ODA3MywxOTI1MTcxODA5
+LDIxMTg1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
