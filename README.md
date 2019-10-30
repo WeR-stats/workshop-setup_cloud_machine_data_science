@@ -133,7 +133,7 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
 	- Hostname: choose a memorable name ou can always change it later from inside the machine
 	- Tags: choose the reference project. I guess you only have the default one at the moment though. You can build more structure to your account later if you decide to stick with Digital Ocean.
   - Click `Create`
-  - Wait for the email containing the IP public address of the server, and the password for the *root* user. The IP address could also be found in the *Resources* tab besides the name of the droplet. 
+  - Wait for the email containing the IP public address of the server, and the password for the *root* user (this is the administratie user for the peop. The IP address could also be found in the *Resources* tab besides the name of the droplet. 
 
 Notice that Digital Ocean highly discourage the creation of *swap space*, practice often used to keep down the size, and hence the cost, of the droplet. This is due to the fact that their system is all made up of SSD storage, that is highly degraded by the continous read/write access, typical when swapping. Besides, upgrading the droplet leads to much better results in general.
 
@@ -2332,6 +2332,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjg3MDE0MjgsLTExMjczMzAwNzMsLT
-MzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbNTg2ODg4NzEyLC0xMTI3MzMwMDczLC0zMz
+U0NTQ3ODNdfQ==
 -->
