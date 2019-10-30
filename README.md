@@ -101,7 +101,7 @@ This tutorial is quite lengthy, as it is full of details for the novice. If you 
 
 ### Sign up to Digital Ocean
   - go to https://m.do.co/c/ef1c7bc80083 (you'll be credited $50 lasting 30 days, offer valid as of today)
-  - insert your email and a sufficiently strong password (you can generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new)). Try not to include any special character, as they can cause some problem
+  - insert your email and a sufficiently strong password (you can generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new)).
   - you'll be asked for a credit card, but no money will be taken from your account. Just remember to check in at the end of the grace period!
   - check your email and validate your new account
 
@@ -235,7 +235,7 @@ It's customary instead to use a group called *sudo* that will act as a temporary
     ~~~
     adduser usrname
     ~~~
-  - enter a password twice (generate one suitable [here](https://www.random.org/passwords/?num=1&len=15&format=html&rnd=new)), and then the required information (you can simply void all the fields)
+  - enter a password twice (try not to include any special character, as they can cause some problem down the line), and then the required information (you can simply void all the fields)
   - add new user as *sudoer* to the *sudo* group:
     ~~~
     usermod -aG sudo usrname
@@ -2331,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjQzNjY3NjEsMjExODUyMTk1MywtMT
+eyJoaXN0b3J5IjpbLTE4NjcyMDQ4NTEsMjExODUyMTk1MywtMT
 EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
