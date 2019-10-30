@@ -612,14 +612,14 @@ Now you should simply wait from a few seconds to a few hours, depending on how f
 <a name="first-snapshot"/>
 
 ### Take Your First Snapshot
-At this point in time, it'd be useful to save the current state of the machine, called **snapshot**, so that if something happens in the future it's always possible to revert back to the current situation in a few minutes with a click from the droplet dashboard. Moreover, we could also build other similar droplets but slighlty different, and use this snapshot as a starting point, instead of going back to the entire droplet creation.
+At this point in time, it'd be useful to save the current state of the machine, called **snapshot**, so that if something happens in the future it's always possible to revert back to the current situation in a few minutes with a click from the droplet dashboard. Moreover, we could also build other similar droplets but slighlty different, and use this snapshot as a starting point, instead of going back to the entire droplet creation process.
 
 To snapshot a droplet:
   - shut down the droplet using the terminal:
     ~~~
-    : `sudo shutdown now
-    ~~~`
-  - login into your DO account, head for the droplet dashboard, and from the left menu click  `**Snapshots`**, enter a memorable name in the textbox, then click `**Take Snapshot`**
+    sudo shutdown now
+    ~~~
+  - login into your DO account, head for the droplet dashboard, and from the left menu click  `Snapshots`, enter a memorable name in the textbox, then click `Take Snapshot`
   - oOnce the process has finished, you can start the droplet again using the switch on the upper right
 
 To restore a snapshot on the droplet it was created from:
@@ -630,9 +630,9 @@ Notice that the restoring process will replace the current droplet content with 
 
 In case you want to create an entirely new droplet from a snapshot:
   - open the  [droplet **Create** page](https://cloud.digitalocean.com/droplets/new), 
-  - select the  `**Snapshots`** tab. Notice that you won't find this tab if you've never created any snapshots.
+  - select the  `Snapshots` tab. Notice that you won't find this tab if you've never created any snapshots.
   - choose the snapshot you’d like to create the droplet from
-  - fill out the rest of the choices on the **Create** page as desired, then click  `**Create`**
+  - fill out the rest of the choices on the **Create** page as desired, then click  `Create`
 
 
 <br/>
@@ -2375,7 +2375,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4Nzk3NjM4MCwtMTk3ODA0NTE1MSw5NT
+eyJoaXN0b3J5IjpbMTE3MzY0MjA4MSwtMTk3ODA0NTE1MSw5NT
 gzNDMzNjYsMTYyNzY3MTI3LDY0OTQxMDk4OCwtMTUyODY3OTE3
 OSw2OTMwOTA2MjMsMTIxMDM0ODQ5MiwtNDUyODk4MDczLDE5Mj
 UxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3MywtMzM1NDU0
