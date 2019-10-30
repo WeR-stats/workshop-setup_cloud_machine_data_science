@@ -280,9 +280,9 @@ One of the main problems beginners encounter when they start using Linux, and th
 
 Having said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. When you're done, you then copy your code to the location where the Shiny Server reads its files. But you quickly discover that... you can't! as that directory is owned by the *shiny* user connected to the *Shiny* Server, and you can't access it. You could think that copying it using `sudo` would do the trick, and it will, but then *shiny* can't access those files because they are owned by root! Moreover, besides the code a data application usually needs data, often lots of different data, and these data need to be stored somewhere where they can be read by *shiny* for the app to actually works. All of the above often ends up with duplications, missed or wrong updating, and so on.
   
-There are a few different solutions, each with its own ups and downs. The solution proposed here will become practical also when using docker containers to deploy shiny applications. We define a public group, containing the *shiny* user plus each user interested in the development of shiny applications, and a subfolder somewhere in the filesystem to use as a public repository for the group itself. 
+There are a few different solutions, each with its own ups and downs. The solution proposed here will become more practical when using docker containers to deploy shiny applications. We simply define a public group, containing the *shiny* user plus each user interested in the development of shiny applications, and a subfolder somewhere in the filesystem to use as a public repository for the group itself. This repository will also contain a subfolder dedicated to to the *R* packages.
 
-Let's start creating the *public* group, and adding to it the user we've just created. Any other user user can be added in hte same way:
+Let's start creating the *public* group, and adding to it the user *usrname* we've just created (any other user user can be added in the same way):
 ~~~
 sudo groupadd public
 sudo usermod -aG public usrname
@@ -2339,7 +2339,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2Mjk0MTksMTIxMDM0ODQ5MiwtNDUyOD
-k4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMTEyNzMzMDA3
-MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbLTIxNTc1MzUxMiwxMjEwMzQ4NDkyLC00NT
+I4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMTI3MzMw
+MDczLC0zMzU0NTQ3ODNdfQ==
 -->
