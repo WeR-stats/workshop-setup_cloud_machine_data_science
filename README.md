@@ -191,12 +191,11 @@ If the IP address and the user name are correctly recognized, the system then pr
     dpkg --configure -a
 	dpkg-reconfigure tzdata
     ~~~
-	then enter the correct zone for your location. Notice that if you leave the timezone as **UTC**, there will be no automatic passage between winter and summer time (the timezones for the UK are **GMT** from november to march and **BST** from april to october). 
+	then enter the correct zone for your location. Notice that if you leave the timezone as **UTC**, there will be no automatic passage between winter and summer time (the timezones for the UK are **GMT** from November to March, and **BST** from April to October). 
   - Before proceeding any further, let's thouroughly upgrade the system:
     ~~~
 	apt-get update
-	apt-get -y upgrade
-	apt-get -y dist-upgrade
+	apt-get -y full-upgrade
 	apt-get -y autoremove
     ~~~
     answering `y` everytime you're asked permission.
@@ -2332,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMTA4NjU3NywyMTE4NTIxOTUzLC0xMT
-I3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbLTE2MjU3OTMwNzgsMjExODUyMTk1MywtMT
+EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
