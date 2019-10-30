@@ -426,14 +426,15 @@ Lastly, let's add to the system an antivirus and a firewall. Starting with the a
     - `0`: No virus found.
     - `1`: Virus(es) found.
     - `2`: Some error(s) occured.
-  - clamscan can be quite CPU intensive. To limit the CPU time to certain levels, you can use two tools; 
+  - the `clamscan` command can be quite CPU intensive. To limit the CPU time to certain levels, you can use two tools; 
     - *cpulimit* to limit *absolute* cpu time: 
       ~~~
       cpulimit -z -e clamscan -l 50 & clamscan -ir /
+      ~~~
     - *nice* to lower the priority of clamscan, setting some limits to *relative* cpu time (as long as no other process requires cputime, clamscan will maximize it, but as soon as another process with a higher priority needs cputime, clamscan will lose it):
-      ```
+      ~~~
       nice -n 15 clamscan && clamscan -ir /
-      ```
+      ~~~
 
 Let's finally proceed with the firewall:
   - enable the software:
@@ -2375,8 +2376,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcwNDI5MzA0LDE2Mjc2NzEyNyw2NDk0MT
-A5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIs
-LTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMj
-czMzAwNzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbLTIwNTgxMTY2MTYsMTYyNzY3MTI3LDY0OT
+QxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0ODQ5
+MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMT
+EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
 -->
