@@ -399,7 +399,47 @@ Login back again as the *new* user, and let's change the standard *ssh* port **2
     ~~~
   - **without logging out from the current session**, open another session besides the one already open, and test that the new user is capable to *ssh* into the machine using the new `xxxx` port, but not from the standard `22`. If anything does not sounds right, close this session and fix using the original session.
 
-Lastly, letsenable the standard firewall *ufw* allowing at once the new above port (THIS IS IMPORTANT!!!)
+Lastly, letsenable the standard firewall *ufw* allowing at once the new above p
+Starting with the antivurus softwre, we're going to use the [ClamAV](0 due to it being open source and 
+### Set up the *ClamAV* antivirus
+
+  - install the software:
+    ```
+    sudo apt-get install clamav clamav-daemon 
+    ```
+  - stop the service and update the signature database:
+    ```
+    systemctl stop clamav-freshclam
+    freshclam
+    ```
+  - start the clamav-freshclam service to keep the database updating in the background:
+    ```
+    systemctl start clamav-freshclam
+    ```
+  - as always, to see the command line usage, run either of the following commands:
+    ```
+    clamscan --help
+    man clamscan
+    ```
+  - to scan recursively ALL files in the home+shiny+public directories, printing only the final summary:
+    ```
+    clamscan -i -r /home/ /srv/ /usr/local/share/public/
+    ```
+    The following are the exit return codes.
+    - `0`: No virus found.
+    - `1`: Virus(es) found.
+    - `2`: Some error(s) occured.
+  - clamscan can be quite CPU intensive. To limit the CPU time to certain levels, you can use two tools; 
+    - *cpulimit* to limit *absolute* cpu time 
+      ```
+      cpulimit -z -e clamscan -l 50 & clamscan -ir /
+      ```
+    - *nice* to lower the priority of clamscan, setting some limits to *relative* cpu time (as long as no other process requires cputime, clamscan will maximize it, but as soon as another process with a higher priority needs cputime, clamscan will lose it):
+      ```
+      nice -n 15 clamscan && clamscan -ir /
+      ```
+
+Let's finally act on the firewall:
   - enable the firewall software:
     ~~~
     sudo ufw enable
@@ -2339,8 +2379,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTMwNzE3NTYsMTYyNzY3MTI3LDY0OT
-QxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0ODQ5
-MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMT
-EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbOTQzNTY2NDI1LDE2Mjc2NzEyNyw2NDk0MT
+A5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIs
+LTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMj
+czMzAwNzMsLTMzNTQ1NDc4M119
 -->
