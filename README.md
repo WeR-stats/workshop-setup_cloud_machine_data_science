@@ -713,7 +713,7 @@ In the same way as above, you can add two other important constants to the *R* e
     ~~~
   - download the package:
     ~~~
-    wget -O rstudio https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-1.2.1511-amd64.deb
+    wget -O rstudio https://s3.amazonaws.com/rstudio-ide-build/server/bionic/amd64/rstudio-server-1.2.5019-amd64.deb
     ~~~
     Please note that the above command presumes Ubuntu *Xenial* 18.04 LTS, and the *preview* 64bit version at the time of writing. It's worth verifying the newest version visiting [this page](http://www.rstudio.com/products/rstudio/download/preview/), and in case substitute where needed. 
     Moreover, if you prefer to stay on the safer side and want to install the *stable* release, check instead [this page](https://www.rstudio.com/products/rstudio/download-server/) for the correct link of the newest version. 
@@ -2367,9 +2367,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NzMxNDUzNSwtMTI5NTMxNzI2LC0xOT
-c4MDQ1MTUxLDk1ODM0MzM2NiwxNjI3NjcxMjcsNjQ5NDEwOTg4
-LC0xNTI4Njc5MTc5LDY5MzA5MDYyMywxMjEwMzQ4NDkyLC00NT
-I4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMTI3MzMw
-MDczLC0zMzU0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbODM1Mjk1MjQwLC0xMjk1MzE3MjYsLTE5Nz
+gwNDUxNTEsOTU4MzQzMzY2LDE2Mjc2NzEyNyw2NDk0MTA5ODgs
+LTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIsLTQ1Mj
+g5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAw
+NzMsLTMzNTQ1NDc4M119
 -->
