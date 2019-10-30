@@ -20,12 +20,10 @@
   - [ ] check/change timezone
   - [ ] update/upgrade/dist-upgrade the system
   - [ ] add DO monitoring:  `curl -sSL https://agent.digitalocean.com/install.sh | sh`
-  - [ ] install missing  _default_  packages:
-    
+  - [ ] install missing  _default_  packages:    
     ```
         apt-get install -y apt-transport-https software-properties-common dos2unix man-db ufw git-core nano libauthen-oath-perl openssh-server
     ```
-    
   - [ ] add user(s) to system:  `adduser luca`
   - [ ] add user(s) to  _sudo_  group:  `usermod -aG sudo luca`  ==> check
   - [ ] configure  _git_  for new user(s):
@@ -71,5 +69,6 @@
   - [ ] take a snapshot
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MjgzMjEwNiwtNTk1ODk3NDg0XX0=
+eyJoaXN0b3J5IjpbLTE0NDgyMjQ3OCwtNDYyODMyMTA2LC01OT
+U4OTc0ODRdfQ==
 -->
