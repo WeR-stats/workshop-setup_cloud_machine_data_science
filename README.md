@@ -274,7 +274,7 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
   <a name="add-public"/>
 
 ### Add *public* group and repository
-
+One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is the 
 ~~~
 sudo groupadd public
 sudo usermod -aG public usrname
@@ -2331,6 +2331,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMT
-I3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbMTg3NjYyMjk1MywxOTI1MTcxODA5LDIxMT
+g1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
