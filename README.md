@@ -278,7 +278,7 @@ One of the main problems beginners encounter when they start using Linux, and th
 
 ![linux file permissions](https://github.com/WeR-stats/workshop-setup_cloud_machine_data_science/blob/master/permissions.png?raw=true)
 
-Having said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. When you're done, you then copy your code to the location where the Shiny Server reads its files. But you quickly discover that... you can't! as that directory is owned by the *shiny* user connected to the *Shiny* Server, and you can't access it. You could think that copying it using `sudo` would do the trick, and it will, but then *shiny* can't access those files because they are owned by root! Moreover, besides the code a data applciation usually needs data, often lots of different data, and they need to be stored somewhere when they can be read by *shiny* for the app to actually works. 
+Having said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. When you're done, you then copy your code to the location where the Shiny Server reads its files. But you quickly discover that... you can't! as that directory is owned by the *shiny* user connected to the *Shiny* Server, and you can't access it. You could think that copying it using `sudo` would do the trick, and it will, but then *shiny* can't access those files because they are owned by root! Moreover, besides the code a data application usually needs data, often lots of different data, and these data need to be stored somewhere where they can be read by *shiny* for the app to actually works. All of the above often ends up with duplications, missed or wrong updating, and so on.
   
 There are a few different solutions, each with its own ups and downs. This solution will become practical also when using docker containers to deploy shiny applications..
 ~~~
@@ -2337,7 +2337,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODE0OTg3LDEyMTAzNDg0OTIsLTQ1Mj
+eyJoaXN0b3J5IjpbMjU0NzA1MzI4LDEyMTAzNDg0OTIsLTQ1Mj
 g5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAw
 NzMsLTMzNTQ1NDc4M119
 -->
