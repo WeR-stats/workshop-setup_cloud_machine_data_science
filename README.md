@@ -683,7 +683,7 @@ We now add a constant to the *R* environment associated with the path of our *pu
     ~~~
 
 In the same way as above, you can add two other important constants to the *R* environment file:
-  - one note of caution is how packages are installed, if you don't want to end up with lots of duplications, different versions and incompatibility. To overcome this situation, we define a common shared location for the packages to be stored. The line to add in the configuration file is the following:
+  - a common shared location for the packages to be stored. The line to add in the configuration file is the following:
     ~~~
     R_LIBS_USER = '/usr/local/share/public/R_library'
     ~~~
@@ -2367,7 +2367,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NjA0NDU1NywtMTI5NTMxNzI2LC0xOT
+eyJoaXN0b3J5IjpbLTgwNzI2MTIxMSwtMTI5NTMxNzI2LC0xOT
 c4MDQ1MTUxLDk1ODM0MzM2NiwxNjI3NjcxMjcsNjQ5NDEwOTg4
 LC0xNTI4Njc5MTc5LDY5MzA5MDYyMywxMjEwMzQ4NDkyLC00NT
 I4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMTI3MzMw
