@@ -275,6 +275,7 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
 
 ### Add *public* group and repository
 One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is the 
+There are a few different solutions, each with its own ups and downs. This solution will become practical also when we'll start using docker
 ~~~
 sudo groupadd public
 sudo usermod -aG public usrname
@@ -2331,6 +2332,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NjYyMjk1MywxOTI1MTcxODA5LDIxMT
+eyJoaXN0b3J5IjpbMTgwMTc3ODMyMSwxOTI1MTcxODA5LDIxMT
 g1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
