@@ -353,8 +353,8 @@ Notice that some service, like [Pastebin]([https://pastebin.com/), returns text 
 ~~~
 mkdir -p ~/scripts/subs
 cd ~/scripts/subs
-wget -O subdirs.lst https://pastebin.com/raw/dshKNkDu
-wget -O subdirs.sh https://pastebin.com/raw/WRsSWjgS
+wget -O subdirs.lst https://pastebin.com/raw/0sTpFmyu
+wget -O subdirs.sh https://pastebin.com/raw/Sb5Qdgtu
 dos2unix *
 chmod +x subdirs.sh
 ./subdirs.sh
@@ -2339,7 +2339,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMT
-AzNDg0OTIsLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5
-NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
+eyJoaXN0b3J5IjpbNjQ5NDEwOTg4LC0xNTI4Njc5MTc5LDY5Mz
+A5MDYyMywxMjEwMzQ4NDkyLC00NTI4OTgwNzMsMTkyNTE3MTgw
+OSwyMTE4NTIxOTUzLC0xMTI3MzMwMDczLC0zMzU0NTQ3ODNdfQ
+==
 -->
