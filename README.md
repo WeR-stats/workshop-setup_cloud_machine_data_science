@@ -274,7 +274,7 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
   <a name="add-public"/>
 
 ### Add *public* group and repository
-One of the main problems beginners encounter when they start using Linux, and the *Shiny* Server in particular,  is related to the much dreaded *file permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: **r**ead, **w**rite, e**x**ecute, that can be carried out by three (groups of) users: the *owner* of the file, any user belonging to a specific *group*, and all the *other* users. When you list the content of a directory, using for example the `ls -l` command, you can see all the permissions in a form of nine binary numbers attached to it, where 0 means *not permitted* and 1 means *permitted*. These numbers must be read in group of three (see also the picture below): the first three (from the left) are the operations allowed to the *owner*, the next three are for the *group*, the last three for *others*. Besided
+One of the main problems beginners encounter when they start using Linux, and the *Shiny* Server in particular,  is related to the much dreaded *file permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: **r**ead, **w**rite, e**x**ecute, that can be carried out by three (groups of) users: the *owner* of the file, any user belonging to a specific *group*, and all the *other* users. When you list the content of a directory, using for example the `ls -l` command, you can see all the permissions in a form of nine binary numbers attached to it, where 0 means *not permitted* and 1 means *permitted*. These numbers must be read in group of three (see also the picture below): the first three (from the left) are the operations allowed to the *owner*, the next three are for the *group*, the last three for *others*. Besides the binary mode, there is also a more common *octal* mode that simply collapse each group of three numbers using their octal value.
 
 ![linux file permissions](https://github.com/WeR-stats/workshop-setup_cloud_machine_data_science/blob/master/permissions.png?raw=true)
 
@@ -2337,7 +2337,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzczMTkzNzIsMTIxMDM0ODQ5MiwtND
-UyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMTEyNzMz
-MDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbLTg1ODE0OTg3LDEyMTAzNDg0OTIsLTQ1Mj
+g5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMjczMzAw
+NzMsLTMzNTQ1NDc4M119
 -->
