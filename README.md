@@ -276,7 +276,7 @@ You would drop the `-r` option if you want to keep the user's *home* dire.
 ### Add *public* group and repository
 One of the main problems beginners encounter when they start using Linux, and *Shiny* in particular,  is related to file *permissions*. Briefly explained, everything in Linux is a file, each file admits three operations: rad, write, execute, that can be by three subjects: the owner of the file, a particular group and all the *other* users. When you list the content of a directory you can see that each file has a list of nine binary numbers attached to it. these numbers must be read in group of three the first three are the operations allowed to the oner, the next are for the group, the last three for *others*.
 
-HAving said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. Tehn you copy in some wy 
+HAving said that, why things become problematic? Well, because you usually deploy an application using RStudio in your owh home directory, which you can acces because it's yours. When you're done, Tehn you copy in some wy 
   
 There are a few different solutions, each with its own ups and downs. This solution will become practical also when using docker containers to deploy shiny applications..
 ~~~
@@ -2335,6 +2335,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MDM4NDczMiwxOTI1MTcxODA5LDIxMT
+eyJoaXN0b3J5IjpbLTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMT
 g1MjE5NTMsLTExMjczMzAwNzMsLTMzNTQ1NDc4M119
 -->
