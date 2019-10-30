@@ -796,11 +796,12 @@ Before installing the *Shiny* Server,  it is usually suggested you first install
     ~~~
     install.packages(c('rmarkdown', 'shiny'))
     ~~~
+    If you're asked to use a *personal* library, answer *yes*. You should be prompted with the path we used above. In 
   - quit the *R* software:
     ~~~
     q()
     ~~~
-    If You can hit `n` when prompted to avoid saving this session.
+    You can hit `n` when prompted to avoid saving this session.
   - move into the software repository we created in the previous RStudio installation step:
     `cd ~/software`
   - download the package (check [here](https://www.rstudio.com/products/shiny/download-server/) for latest version):
@@ -2367,7 +2368,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NDU0MjI3MSw4MzUyOTUyNDAsLTEyOT
+eyJoaXN0b3J5IjpbMTk3Nzk3MzQ0Niw4MzUyOTUyNDAsLTEyOT
 UzMTcyNiwtMTk3ODA0NTE1MSw5NTgzNDMzNjYsMTYyNzY3MTI3
 LDY0OTQxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMD
 M0ODQ5MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1
