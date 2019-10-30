@@ -428,9 +428,8 @@ Lastly, let's add to the system an antivirus and a firewall. Starting with the a
     - `2`: Some error(s) occured.
   - clamscan can be quite CPU intensive. To limit the CPU time to certain levels, you can use two tools; 
     - *cpulimit* to limit *absolute* cpu time: 
-       ~~~
-       cpulimit -z -e clamscan -l 50 & clamscan -ir /
-       ~~~
+      ~~~
+      cpulimit -z -e clamscan -l 50 & clamscan -ir /
     - *nice* to lower the priority of clamscan, setting some limits to *relative* cpu time (as long as no other process requires cputime, clamscan will maximize it, but as soon as another process with a higher priority needs cputime, clamscan will lose it):
       ```
       nice -n 15 clamscan && clamscan -ir /
@@ -2376,8 +2375,8 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NjY0MTExMiwxNjI3NjcxMjcsNjQ5ND
-EwOTg4LC0xNTI4Njc5MTc5LDY5MzA5MDYyMywxMjEwMzQ4NDky
-LC00NTI4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUzLC0xMT
-I3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbMzcwNDI5MzA0LDE2Mjc2NzEyNyw2NDk0MT
+A5ODgsLTE1Mjg2NzkxNzksNjkzMDkwNjIzLDEyMTAzNDg0OTIs
+LTQ1Mjg5ODA3MywxOTI1MTcxODA5LDIxMTg1MjE5NTMsLTExMj
+czMzAwNzMsLTMzNTQ1NDc4M119
 -->
