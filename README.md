@@ -151,7 +151,7 @@ The first time you connect to a droplet as *root*, the system asks you to change
   <a name="without-key-windows"/>
 
 #### Windows users
-Windows has no embedded ssh client by default. Many software can be downloaded for free, one of the most famous is [PuTTY](https://www.putty.org/), but we are going to use the much enhanced [MobaXTerm](https://mobaxterm.mobatek.net/), which is free for personal use and allows, among other functionalities, multi-tabbing and saving sessions.
+Windows has no embedded ssh client by default. Many software can be downloaded for free, one of the most famous is [PuTTY](https://www.putty.org/), but we are going to use the much enhanced [MobaXTerm](https://mobaxterm.mobatek.net/), which is free for personal use and allows, among other functionalities, *sftp*, tunnelling, multi-tabbing and saving sessions.
   - [Download](https://mobaxterm.mobatek.net/download-home-edition.html) the *Home* edition of *MobaXTerm*. You can use, if you so prefer, the *portable* edition that doesn't need any installation. Just unzip the downloaded file in some folder of your choice, then run the included executable.
   - Open *MobaXTerm*
   - For a more standard copy and paste behaviour, click `Settings` towards the far right of the button bar, then click the tab `Terminal`. Uncheck the option *Paste using right-click*, then click `OK`. Now you can paste content in any terminal window using the standard `SHIFT+INS` keys combination (but you can't *copy* and *paste* using the more frequent `CTRL+C` and `CTRL+V`). In addition, a right-click button of the mouse exposes a quite extensive actions menu.
@@ -2332,6 +2332,6 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ5NDM4MDkwLC0xMTI3MzMwMDczLC0zMz
-U0NTQ3ODNdfQ==
+eyJoaXN0b3J5IjpbMjExODUyMTk1MywtMTEyNzMzMDA3MywtMz
+M1NDU0NzgzXX0=
 -->
