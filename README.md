@@ -426,17 +426,17 @@ Lastly, let's add to the system an antivirus and a firewall. Starting with the a
     - `0`: No virus found.
     - `1`: Virus(es) found.
     - `2`: Some error(s) occured.
-  - the `clamscan` command can be quite CPU intensive. To limit the CPU time to certain levels, you can use two tools; 
+  - the *clamscan* command can be quite CPU intensive. To limit the CPU time to certain levels, you can use two tools; 
     - *cpulimit* to limit *absolute* cpu time: 
       ~~~
       cpulimit -z -e clamscan -l 50 & clamscan -ir /
       ~~~
-    - *nice* to lower the priority of clamscan, setting some limits to *relative* cpu time (as long as no other process requires cputime, clamscan will maximize it, but as soon as another process with a higher priority needs cputime, clamscan will lose it):
+    - *nice* to lower the priority of *clamscan*, setting some limits to *relative* cpu time (as long as no other process requires cputime, *clamscan* will maximize it, but as soon as another process with a higher priority needs cputime, clamscan will lose it):
       ~~~
       nice -n 15 clamscan && clamscan -ir /
       ~~~
 
-Let's finally proceed with the firewall:
+Let's finally proceed with the firewall. We're using the *ufw* package that's included by default in the Ubuntu:
   - enable the software:
     ~~~
     sudo ufw enable
@@ -2376,7 +2376,7 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTgxMTY2MTYsMTYyNzY3MTI3LDY0OT
+eyJoaXN0b3J5IjpbLTE0OTMwNTU5MDcsMTYyNzY3MTI3LDY0OT
 QxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0ODQ5
 MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1MywtMT
 EyNzMzMDA3MywtMzM1NDU0NzgzXX0=
