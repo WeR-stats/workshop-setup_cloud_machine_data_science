@@ -860,7 +860,7 @@ If you still haven't installed any package, besides *shiny* and *rmarkdown*, let
 sudo apt-get install -y curl libssl-dev libcurl4-gnutls-dev
 sudo add-apt-repository ppa:ubuntugis/ppa 
 sudo apt-get update 
-sudo apt-get install gdal-bin libgdal-dev libgeos++-dev libudunits2-dev libv8-dev libjq-dev libcairo2-dev libxt-dev
+sudo apt-get install -y gdal-bin libgdal-dev libgeos++-dev libudunits2-dev libv8-dev libjq-dev libcairo2-dev libxt-dev
 ~~~
 You can now enter *R*, then install the required packages:
 ~~~
@@ -2372,9 +2372,9 @@ If anyone has any comments on anything in this document, [I’d love to hear abo
 ---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQzNTk1NSw4MzUyOTUyNDAsLTEyOTUzMT
-cyNiwtMTk3ODA0NTE1MSw5NTgzNDMzNjYsMTYyNzY3MTI3LDY0
-OTQxMDk4OCwtMTUyODY3OTE3OSw2OTMwOTA2MjMsMTIxMDM0OD
-Q5MiwtNDUyODk4MDczLDE5MjUxNzE4MDksMjExODUyMTk1Mywt
-MTEyNzMzMDA3MywtMzM1NDU0NzgzXX0=
+eyJoaXN0b3J5IjpbOTUyMTM0MzE5LDgzNTI5NTI0MCwtMTI5NT
+MxNzI2LC0xOTc4MDQ1MTUxLDk1ODM0MzM2NiwxNjI3NjcxMjcs
+NjQ5NDEwOTg4LC0xNTI4Njc5MTc5LDY5MzA5MDYyMywxMjEwMz
+Q4NDkyLC00NTI4OTgwNzMsMTkyNTE3MTgwOSwyMTE4NTIxOTUz
+LC0xMTI3MzMwMDczLC0zMzU0NTQ3ODNdfQ==
 -->
