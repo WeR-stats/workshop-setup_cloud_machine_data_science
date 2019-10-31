@@ -335,7 +335,7 @@
   - [ggvoronoi](https://github.com/garretrc/ggvoronoi/) - Provides functionalities to build Voronoi choropleth maps with ggplot2
   - [ggwordcloud](https://github.com/lepennec/ggwordcloud) - Provides a fast wordcloud text geom for ggplot2
   - [lemon](https://github.com/stefanedwards/lemon) - Provides added functionalities for axes and legends
-  - [lindia](https://github.com/yeukyul/lindia) - linear regression diagonostic plots
+  - [lindia](https://github.com/yeukyul/lindia) - Provides linear regression diagnostic plots
   - [**patchwork**](https://github.com/thomasp85/patchwork) `install_github("thomasp85/patchwork")` - Allows to easily combine separate ggplots into the same graphic 
   - [**plotROC**](http://github.com/sachsmc/plotROC) - Provides functions to generate interactive ROC curve plots
   - [qqplotr](https://github.com/aloy/qqplotr) - Provides functionalities for drawing both *QQ* and *PP* points, lines, and confidence bands.
@@ -842,8 +842,8 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MTQ0OTkzNiwyMTA1MjMwNDU4LC0xMD
-c3MDA0MDIxLC0xNDQ0MjYwNzM5LC0xMDk2NDk5MjMsOTA3MTUz
-ODg2LC03MjcyODkyMjMsLTEyOTIyNDc0NjMsLTIxMDMzNjA0Mz
-EsODE5Mzg1Njc3LDk2MTE1MDA1MV19
+eyJoaXN0b3J5IjpbLTEyMzc4MTMyNjcsMjEwNTIzMDQ1OCwtMT
+A3NzAwNDAyMSwtMTQ0NDI2MDczOSwtMTA5NjQ5OTIzLDkwNzE1
+Mzg4NiwtNzI3Mjg5MjIzLC0xMjkyMjQ3NDYzLC0yMTAzMzYwND
+MxLDgxOTM4NTY3Nyw5NjExNTAwNTFdfQ==
 -->
