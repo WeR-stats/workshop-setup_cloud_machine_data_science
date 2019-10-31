@@ -300,7 +300,6 @@
   - [ggChernoff](https://github.com/Selbosh/ggChernoff) - Provides functionalities to map multivariate data to human-like faces (so called [Chernoff faces](https://en.wikipedia.org/wiki/Chernoff_face)) with *ggpolot2*.
   - [ggcorrplot](https://github.com/kassambara/ggcorrplot) - Visualization of a correlation matrix using ggplot2
   - [ggdag](https://github.com/malcolmbarrett/ggdag) - An R Package for visualizing and analyzing directed acyclic graphs
-  - [ggedit](https://github.com/metrumresearchgroup/ggedit) - Interactively edit ggplot layer aesthetics and theme definitions
   - [**ggExtra**](http://github.com/daattali/ggExtra) - Add marginal plots to ggplot2
   - [ggfittext](https://github.com/wilkox/ggfittext) - Provides a geometry to fit text into boxes
   - [ggfocus](https://github.com/Freguglia/ggfocus) - Allows to highlight data for a specific subgroup of observations in any ggplot
@@ -346,11 +345,12 @@
   <a name="ggplot-helpers"/>
 
 #### ggplot helpers
+  - [ggedit](https://github.com/metrumresearchgroup/ggedit) - Interactively edit *ggplot* layer aesthetics and theme definitions
   - [esquisse](https://github.com/dreamRs/esquisse) - *RStudio* add-in to make plots with *ggplot2*
   - [ggquickeda](https://github.com/smouksassi/ggquickeda) - 
   - [ggplotAssist](https://github.com/cardiomoon/ggplotAssist) - 
   - [ggplotgui](https://github.com/gertstulp/ggplotgui/) - allows users to visualize their data using an online graphical user interface that makes use of ggplot
-  - [ggThemeAssist](https://github.com/calligross/ggthemeassist) - RStudio-Addin that provides a GUI for editing *ggplot2* themes.
+  - [ggThemeAssist](https://github.com/calligross/ggthemeassist) - *RStudio* add-in that provides a GUI for editing *ggplot2* themes.
 
   <a name="ggplot-themes"/>
 
@@ -838,7 +838,7 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTk2NDAyMTksLTEwOTY0OTkyMyw5MD
+eyJoaXN0b3J5IjpbLTE0NDQyNjA3MzksLTEwOTY0OTkyMyw5MD
 cxNTM4ODYsLTcyNzI4OTIyMywtMTI5MjI0NzQ2MywtMjEwMzM2
 MDQzMSw4MTkzODU2NzcsOTYxMTUwMDUxXX0=
 -->
