@@ -362,6 +362,7 @@
   - [ggthemr](https://github.com/cttobin/ggthemr) `install_github('cttobin/ggthemr')` - Another collection of various themes 
   - [hrbrthemes](https://github.com/hrbrmstr/hrbrthemes) - Provides typography-centric themes 
   - [tvthemes](https://github.com/Ryo-N7/tvthemes) - Themes and palettes based on some people's favourite TV shows
+  - [ggtech](https://github.com/ricardo-bion/ggtech) - Themes and palettes associated with some based on some 
 
   <a name="palettes"/>
 
@@ -840,8 +841,8 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzAyMDkyNzYsLTEwNzcwMDQwMjEsLT
-E0NDQyNjA3MzksLTEwOTY0OTkyMyw5MDcxNTM4ODYsLTcyNzI4
-OTIyMywtMTI5MjI0NzQ2MywtMjEwMzM2MDQzMSw4MTkzODU2Nz
-csOTYxMTUwMDUxXX0=
+eyJoaXN0b3J5IjpbMTM3NjkzMTIxNCwtMTA3NzAwNDAyMSwtMT
+Q0NDI2MDczOSwtMTA5NjQ5OTIzLDkwNzE1Mzg4NiwtNzI3Mjg5
+MjIzLC0xMjkyMjQ3NDYzLC0yMTAzMzYwNDMxLDgxOTM4NTY3Ny
+w5NjExNTAwNTFdfQ==
 -->
