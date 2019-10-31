@@ -305,8 +305,8 @@
   - [ggfocus](https://github.com/Freguglia/ggfocus) - Allows to highlight data for a specific subgroup of observations in any ggplot
   - [ggforce](http://github.com/thomasp85/ggforce) - Repository of missing functionalities of any nature and type
   - [ggfortify](http://github.com/sinhrks/ggfortify) - Data Visualization Tools for Statistical Analysis Results in a unified style
-  - [gghalves](https://github.com/erocoar/gghalves) `install_github('erocoar/gghalves')` - Provides 
-  -   - [**gghighlight**](https://github.com/yutannihilation/gghighlight) - Provides functionalitites to highlight conditionally lines and points geometries in ’ggplot2
+  - [gghalves](https://github.com/erocoar/gghalves) `install_github('erocoar/gghalves')` - Allows to compose *half-half* plots, like displaying a boxplot next to jittered points, or violin plots side by side with dotplots.
+  - [**gghighlight**](https://github.com/yutannihilation/gghighlight) - Provides functionalitites to highlight conditionally lines and points geometries in ’ggplot2
   - [ggimage](https://github.com/GuangchuangYu/ggimage) - Provides integration of image files and graphic objects
   - [**ggiraph**](http://github.com/davidgohel/ggiraph) - Provides interaction to some geometries
   - [ggiraphExtra](https://github.com/cardiomoon/ggiraphExtra) - Provides additional interactivity on top of ggiraph
@@ -839,8 +839,8 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5OTQzOTY4OCwtMTQ0NDI2MDczOSwtMT
-A5NjQ5OTIzLDkwNzE1Mzg4NiwtNzI3Mjg5MjIzLC0xMjkyMjQ3
-NDYzLC0yMTAzMzYwNDMxLDgxOTM4NTY3Nyw5NjExNTAwNTFdfQ
-==
+eyJoaXN0b3J5IjpbLTEwNzcwMDQwMjEsLTE0NDQyNjA3MzksLT
+EwOTY0OTkyMyw5MDcxNTM4ODYsLTcyNzI4OTIyMywtMTI5MjI0
+NzQ2MywtMjEwMzM2MDQzMSw4MTkzODU2NzcsOTYxMTUwMDUxXX
+0=
 -->
