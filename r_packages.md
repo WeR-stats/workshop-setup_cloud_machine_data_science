@@ -294,7 +294,7 @@
   - [ggaluvial](https://github.com/corybrunson/ggalluvial) - Provides geometries to create [alluvial](https://github.com/mbojan/alluvial) diagrams
   - [ggally](http://github.com/ggobi/ggally) - Reduce the complexity of combining geometric objects with transformed data
   - [gggalt](http://github.com/hrbrmstr/ggalt) - Provides extra coordinate systems, geometries, statistical transformation and scales
-  - [gganimate](http://github.com/dgrtwo/gganimate/) `install_github('dgrtwo/gganimate')` - Wraps the *animation* package to create animated *ggplot2* plots
+  - [gganimate](http://github.com/dgrtwo/gganimate/) - Wraps the *animation* package to create animated *ggplot2* plots
   - [ggbuildr](https://cran.r-project.org/package=ggbuildr) - Provides functionalities for saving *ggplot* objects into multiple files, each with a layer added incrementally.
   - [ggChernoff](https://github.com/Selbosh/ggChernoff) - Provides functionalities to map multivariate data to human-like faces (so called [Chernoff faces](https://en.wikipedia.org/wiki/Chernoff_face)) with *ggpolot2*.
   - [ggcorrplot](https://github.com/kassambara/ggcorrplot) - Visualization of a correlation matrix using ggplot2
@@ -836,6 +836,7 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNzI4OTIyMywtMTI5MjI0NzQ2MywtMj
-EwMzM2MDQzMSw4MTkzODU2NzcsOTYxMTUwMDUxXX0=
+eyJoaXN0b3J5IjpbOTA3MTUzODg2LC03MjcyODkyMjMsLTEyOT
+IyNDc0NjMsLTIxMDMzNjA0MzEsODE5Mzg1Njc3LDk2MTE1MDA1
+MV19
 -->
