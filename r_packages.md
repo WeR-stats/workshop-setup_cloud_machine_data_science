@@ -295,7 +295,7 @@
   - [ggally](http://github.com/ggobi/ggally) - Reduce the complexity of combining geometric objects with transformed data
   - [gggalt](http://github.com/hrbrmstr/ggalt) - Provides extra coordinate systems, geometries, statistical transformation and scales
   - [gganimate](http://github.com/dgrtwo/gganimate/) - Wraps the *animation* package to create animated *ggplot2* plots
-  - [ggbeeswarm](https://github.com/eclarke/ggbeeswarm) - Uses the [beeswarm](https://cran.r-project.org/web/packages/beeswarm/index.html) library to plot column scatterplots  scatter plots point-size based offset.
+  - [ggbeeswarm](https://github.com/eclarke/ggbeeswarm) - Uses the [beeswarm](https://cran.r-project.org/web/packages/beeswarm/index.html) library to plot column/violin scatterplots  which avoids overlapping datapoints.
   - [ggbuildr](https://cran.r-project.org/package=ggbuildr) - Provides functionalities for saving *ggplot* objects into multiple files, each with a layer added incrementally.
   - [ggChernoff](https://github.com/Selbosh/ggChernoff) - Provides functionalities to map multivariate data to human-like faces (so called [Chernoff faces](https://en.wikipedia.org/wiki/Chernoff_face)) with *ggpolot2*.
   - [ggcorrplot](https://github.com/kassambara/ggcorrplot) - Visualization of a correlation matrix using ggplot2
@@ -838,7 +838,7 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODM0MzMyMzQsLTEwOTY0OTkyMyw5MD
+eyJoaXN0b3J5IjpbLTE4MzQzNDEyNzksLTEwOTY0OTkyMyw5MD
 cxNTM4ODYsLTcyNzI4OTIyMywtMTI5MjI0NzQ2MywtMjEwMzM2
 MDQzMSw4MTkzODU2NzcsOTYxMTUwMDUxXX0=
 -->
