@@ -345,6 +345,7 @@
   <a name="ggplot-helpers"/>
 
 #### ggplot helpers
+  - []() - RStudio add-in to make plots with ggplot2*
   - [ggquickeda](https://github.com/smouksassi/ggquickeda) - 
   - [ggplotAssist](https://github.com/cardiomoon/ggplotAssist) - 
   - [ggplotgui](https://github.com/gertstulp/ggplotgui/) - allows users to visualize their data using an online graphical user interface that makes use of ggplot
@@ -836,7 +837,7 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA3MTUzODg2LC03MjcyODkyMjMsLTEyOT
-IyNDc0NjMsLTIxMDMzNjA0MzEsODE5Mzg1Njc3LDk2MTE1MDA1
-MV19
+eyJoaXN0b3J5IjpbLTE2ODI3NzQwOTQsOTA3MTUzODg2LC03Mj
+cyODkyMjMsLTEyOTIyNDc0NjMsLTIxMDMzNjA0MzEsODE5Mzg1
+Njc3LDk2MTE1MDA1MV19
 -->
