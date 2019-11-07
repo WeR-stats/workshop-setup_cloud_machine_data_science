@@ -677,6 +677,13 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
   - [SpatialEpiApp](https://github.com/Paula-Moraga/SpatialEpiApp) - 
   - [teachingApps](https://github.com/Auburngrads/teachingApps) - Apps for Teaching Statistics, R Programming, and Shiny App Development
 
+  <a name="shiny-apps"/>
+
+### RMarkdown Themes
+  - [prettydoc]() - 
+  - [rmdformats]() - 
+  - []() - 
+  - []() - 
 
 
 
@@ -844,9 +851,8 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTk3MDM3MzAsLTEyMzc4MTMyNjcsMj
-EwNTIzMDQ1OCwtMTA3NzAwNDAyMSwtMTQ0NDI2MDczOSwtMTA5
-NjQ5OTIzLDkwNzE1Mzg4NiwtNzI3Mjg5MjIzLC0xMjkyMjQ3ND
-YzLC0yMTAzMzYwNDMxLDgxOTM4NTY3Nyw5NjExNTAwNTFdfQ==
-
+eyJoaXN0b3J5IjpbMTk2MjUzMTE0NSwtMTIzNzgxMzI2NywyMT
+A1MjMwNDU4LC0xMDc3MDA0MDIxLC0xNDQ0MjYwNzM5LC0xMDk2
+NDk5MjMsOTA3MTUzODg2LC03MjcyODkyMjMsLTEyOTIyNDc0Nj
+MsLTIxMDMzNjA0MzEsODE5Mzg1Njc3LDk2MTE1MDA1MV19
 -->
