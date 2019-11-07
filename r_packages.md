@@ -666,7 +666,7 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
   <a name="shiny-apps"/>
 
-#### Shiny Apps Examples
+### Shiny Apps Examples
   - [ChannelAttributionApp]() - 
   - [cocktailApp](https://github.com/shabbychef/cocktailApp)
   - [ERSA](https://github.com/cbhurley/ERSA) - A collection of functions for displaying the results of a regression calculation, packaged together as a shiny app.
@@ -676,6 +676,8 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
   - [RtutoR](https://github.com/skranz/RTutor) - 
   - [SpatialEpiApp](https://github.com/Paula-Moraga/SpatialEpiApp) - 
   - [teachingApps](https://github.com/Auburngrads/teachingApps) - Apps for Teaching Statistics, R Programming, and Shiny App Development
+
+
 
 
   <a name="applications"/>
@@ -842,8 +844,9 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzc4MTMyNjcsMjEwNTIzMDQ1OCwtMT
-A3NzAwNDAyMSwtMTQ0NDI2MDczOSwtMTA5NjQ5OTIzLDkwNzE1
-Mzg4NiwtNzI3Mjg5MjIzLC0xMjkyMjQ3NDYzLC0yMTAzMzYwND
-MxLDgxOTM4NTY3Nyw5NjExNTAwNTFdfQ==
+eyJoaXN0b3J5IjpbLTE5MTk3MDM3MzAsLTEyMzc4MTMyNjcsMj
+EwNTIzMDQ1OCwtMTA3NzAwNDAyMSwtMTQ0NDI2MDczOSwtMTA5
+NjQ5OTIzLDkwNzE1Mzg4NiwtNzI3Mjg5MjIzLC0xMjkyMjQ3ND
+YzLC0yMTAzMzYwNDMxLDgxOTM4NTY3Nyw5NjExNTAwNTFdfQ==
+
 -->
