@@ -680,10 +680,11 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
   <a name="shiny-apps"/>
 
 ### RMarkdown Themes
-  - [prettydoc]() - 
+  - [prettydoc](https://github.com/yixuan/prettydoc) - 
   - [rmdformats]() - 
+  - [xaringan]() - 
   - []() - 
-  - []() - 
+  - [rmdshower](https://github.com/mangothecat/rmdshower) - 
 
 
 
@@ -851,8 +852,9 @@ Plus, `tmaptools::palette_explorer()` is a great tool for picking *ColorBrewer* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MjUzMTE0NSwtMTIzNzgxMzI2NywyMT
-A1MjMwNDU4LC0xMDc3MDA0MDIxLC0xNDQ0MjYwNzM5LC0xMDk2
-NDk5MjMsOTA3MTUzODg2LC03MjcyODkyMjMsLTEyOTIyNDc0Nj
-MsLTIxMDMzNjA0MzEsODE5Mzg1Njc3LDk2MTE1MDA1MV19
+eyJoaXN0b3J5IjpbLTQ3NDE4OTUwNSwxOTYyNTMxMTQ1LC0xMj
+M3ODEzMjY3LDIxMDUyMzA0NTgsLTEwNzcwMDQwMjEsLTE0NDQy
+NjA3MzksLTEwOTY0OTkyMyw5MDcxNTM4ODYsLTcyNzI4OTIyMy
+wtMTI5MjI0NzQ2MywtMjEwMzM2MDQzMSw4MTkzODU2NzcsOTYx
+MTUwMDUxXX0=
 -->
